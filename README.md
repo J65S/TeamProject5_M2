@@ -133,7 +133,6 @@ The server exposes one tool:
 
 The agent instructions require it to call this tool before creating a recommendation. Assignment data comes from the MCP server; the model interprets the student's request and produces the plan.
 
-The server is started automatically by `agent.py`. It does not need to be launched separately.
 
 ## Sample Assignment Data
 
@@ -142,19 +141,17 @@ The server is started automatically by `agent.py`. It does not need to be launch
 | Algorithms | Study for sorting quiz | 2026-10-01 | 2 |
 | Senior Project | Write interview summary | 2026-10-04 | 4 |
 
-These assignments are demonstration data stored in `mcp_server.py`. They are not retrieved from a learning management system.
+These assignments are demonstration data stored in `mcp_server.py`.
 
 ## Manual Test Cases
 
-These cases evaluate expected behavior rather than exact wording because model responses may vary. Run each input separately and compare the response against the expected result.
+These cases evaluate expected behavior rather than exact wording because model responses may vary.
 
 | Test | Input | Expected Output |
 |------|-------|-----------------|
 | 1 — Limited time | “I have 1 hour to study. What should I work on?” | Prioritizes the earlier Algorithms task, recommends no more than 1 hour of work, and acknowledges that unfinished work remains. |
 | 2 — No available time | “I have 0 hours available today. What should I do?” | Acknowledges that no work can be scheduled today and suggests a future work block without assigning study or preparation today. |
 | 3 — Sufficient time | “I have 6 hours to study. How should I divide my time?” | Recommends 2 hours for Algorithms and 4 hours for the Senior Project task, totaling no more than 6 hours. |
-
-For every case, also check that the response uses only the sample assignments and does not claim access to a real student account or calendar.
 
 ### Testing Observations
 
