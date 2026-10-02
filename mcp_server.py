@@ -4,7 +4,7 @@ mcp = MCPServer("Student Assignments")
 
 
 @mcp.tool()
-def get_assignments() -> list[dict]:
+def get_assignments() -> list[dict[str, object]]:
     """Return sample assignments for the workload planner."""
     return [
         {
