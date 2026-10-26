@@ -1,0 +1,57 @@
+COURSE: COT 3400 — Algorithms and Data Structures
+TERM: Fall 2026
+INSTRUCTOR: Dr. Morgan Lee
+
+COURSE DESCRIPTION
+This course covers algorithm analysis, sorting, trees, heaps,
+graphs, and techniques for solving computational problems.
+
+ASSIGNMENTS AND ASSESSMENTS
+
+Task: Big-O analysis worksheet
+Due: 2026-09-04
+Estimated hours: 2
+
+Task: Recursion practice problems
+Due: 2026-09-11
+Estimated hours: 3
+
+Task: Sorting algorithms quiz preparation
+Due: 2026-10-01
+Estimated hours: 2
+
+Task: Exam 1 preparation
+Due: 2026-10-06
+Estimated hours: 5
+
+Task: Binary tree traversal worksheet
+Due: 2026-10-16
+Estimated hours: 3
+
+Task: Trees and heaps quiz preparation
+Due: 2026-10-28
+Estimated hours: 3
+
+Task: Heap implementation assignment
+Due: 2026-11-04
+Estimated hours: 5
+
+Task: Graph traversal practice problems
+Due: 2026-11-11
+Estimated hours: 3
+
+Task: Shortest path algorithms assignment
+Due: 2026-11-18
+Estimated hours: 5
+
+Task: Dynamic programming worksheet
+Due: 2026-12-02
+Estimated hours: 4
+
+Task: Final exam preparation
+Due: 2026-12-09
+Estimated hours: 8
+
+GENERAL GUIDANCE
+Start larger programming assignments several days before the deadline.
+For exams and quizzes, spread studying across multiple sessions.

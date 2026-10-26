@@ -1,0 +1,62 @@
+COURSE: CEN 4930 — AI Agent Workflows
+TERM: Fall 2026
+INSTRUCTOR: Dr. Taylor Reed
+
+COURSE DESCRIPTION
+This course introduces AI agents, tool use, multi-agent workflows,
+retrieval, evaluation, and responsible system design.
+
+ASSIGNMENTS AND ASSESSMENTS
+
+Task: Agent use-case proposal
+Due: 2026-09-02
+Estimated hours: 2
+
+Task: Build a single-agent prototype
+Due: 2026-09-16
+Estimated hours: 5
+
+Task: M2 team project prototype
+Due: 2026-10-01
+Estimated hours: 6
+
+Task: Multi-agent workflow assignment
+Due: 2026-10-15
+Estimated hours: 6
+
+Task: Reasoning and RAG assignment
+Due: 2026-10-25
+Estimated hours: 7
+
+Task: M3 multi-agent system and cost analysis
+Due: 2026-10-28
+Estimated hours: 8
+
+Task: Evaluation test-case preparation
+Due: 2026-11-04
+Estimated hours: 3
+
+Task: Run agent evaluation suite
+Due: 2026-11-11
+Estimated hours: 4
+
+Task: User testing sessions and notes
+Due: 2026-11-13
+Estimated hours: 5
+
+Task: M4 evaluation and user testing report
+Due: 2026-11-18
+Estimated hours: 7
+
+Task: Final presentation preparation
+Due: 2026-12-04
+Estimated hours: 5
+
+Task: Final project presentation
+Due: 2026-12-09
+Estimated hours: 3
+
+GENERAL GUIDANCE
+Begin team milestones early and coordinate responsibilities.
+Test agent behavior with both normal and unexpected inputs.
+Document limitations and changes as the project develops.
