@@ -54,6 +54,8 @@ async def main():
                 "and estimated hours. "
                 "Calculate the total estimated hours. "
                 "Include the student's available time if they provided it. "
+                "After receiving the tool result, briefly explain which assignments "
+                "have the closest deadlines and note their estimated workloads. "
                 "Do not create the final study schedule."
             ),
             mcp_servers=[server],
