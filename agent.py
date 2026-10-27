@@ -43,6 +43,7 @@ async def main():
         },
     ) as server:
 
+        # Agent 1: retrieve and analyze assignments
         assignment_analyst = Agent(
             name="Assignment Analyst",
             model="gpt-oss",
@@ -54,13 +55,15 @@ async def main():
                 "and estimated hours. "
                 "Calculate the total estimated hours. "
                 "Include the student's available time if they provided it. "
-                "After receiving the tool result, briefly explain which assignments "
-                "have the closest deadlines and note their estimated workloads. "
+                "After receiving the tool result, briefly explain which "
+                "assignments have the closest deadlines and note their "
+                "estimated workloads. "
                 "Do not create the final study schedule."
             ),
             mcp_servers=[server],
         )
 
+        # Agent 2: create a plan using the analyst's findings
         schedule_planner = Agent(
             name="Schedule Planner",
             model="gpt-oss",
@@ -87,6 +90,19 @@ async def main():
             student_request,
         )
 
+        # Display the actual tool activity from the analyst's run.
+        print("\n--- Assignment Analyst tool activity ---")
+
+        for item in analyst_result.new_items:
+            if item.type == "tool_call_item":
+                print("\nAction: Assignment Analyst called a tool.")
+                print(item.raw_item)
+
+            elif item.type == "tool_call_output_item":
+                print("\nTool result:")
+                print(item.output)
+
+        # Everything below is outside the loop, so it only runs once.
         analysis = str(analyst_result.final_output or "").strip()
 
         if not analysis or analysis.startswith('{"tool"'):
@@ -96,7 +112,7 @@ async def main():
             )
             return
 
-        # Pass the original request and analyst's output to the planner
+        # Explicit handoff to the Schedule Planner
         handoff_payload = (
             f"Student's original request:\n{student_request}\n\n"
             f"Assignment Analyst's findings:\n{analysis}"
