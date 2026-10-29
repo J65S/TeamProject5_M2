@@ -1,180 +1,159 @@
-# TeamProject5_M2
-AI Student Workload Tracker: A prototype agent that helps students prioritize assignments and plan their available study time.
+# TeamProject5_M3
+## TaskPilot — AI Student Workload Tracker
+**Team 5 — Milestone 3**
 
-# AI Student Workload Tracker
-### Team 5 — Milestone 2
+A command-line multi-agent prototype that helps students prioritize assignments and plan their available study time.
 
-A command-line agent that helps students decide what assignment work to prioritize based on their available study time.
-
-The prototype uses the OpenAI Agents SDK with an NRP OpenAI-compatible model endpoint. It retrieves sample assignment information through a local Model Context Protocol (MCP) server and generates a study recommendation.
+TaskPilot uses the OpenAI Agents SDK with `gpt-oss` through an NRP OpenAI-compatible endpoint. A local MCP server retrieves assignment information from fictional syllabus files.
 
 ## What the Prototype Does
 
-- Accepts a student's request through the terminal.
-- Retrieves sample assignments using the `get_assignments` MCP tool.
-- Recommends how to use the student's available study time.
-- Identifies when available time is insufficient.
-- Asks for available study time when it is missing from the request.
+- Accepts a student's available time and planning request.
+- Retrieves upcoming assignments from syllabus files.
+- Identifies approaching deadlines and estimated workloads.
+- Passes assignment analysis to a separate planning agent.
+- Generates a study recommendation and identifies unfinished work.
+- Displays tool calls, retrieved data, and the handoff in the terminal.
 
-This is an early prototype. It uses sample assignments and does not connect to Canvas, a calendar, or a student's actual course account.
+The prototype uses demonstration data. It does not connect to Canvas, calendars, or student accounts.
+
+## Multi-Agent Workflow
+
+1. **Assignment Analyst:** Calls `get_assignments`, summarizes upcoming work, and identifies approaching deadlines.
+2. **Handoff:** After the analyst finishes and passes a basic output check, Python passes its findings and the student's original request to the Schedule Planner.
+3. **Schedule Planner:** Uses that information to recommend how the student should spend their available time.
+
+The handoff is coordinated by Python rather than the SDK's built-in handoff feature.
+
+### Reasoning Pattern
+
+The analyst uses a simple ReAct-style tool-use sequence: call the assignment tool, observe its result, and analyze the retrieved workload. The terminal displays the actual tool call and response. This is a retrieval-and-analysis sequence, not a repeated loop involving multiple tools.
+
+### Knowledge Layer
+
+TaskPilot uses simple file-based retrieval-augmented generation (RAG). The MCP tool retrieves upcoming assignment records from local syllabus files, and the agents use those records to generate recommendations. Retrieval is date-based; it does not use embeddings or a vector database.
+
+The server uses the computer's current date. Assignments due before today are assumed completed, while assignments due today or later are returned in deadline order. Actual submission status is not checked.
 
 ## Repository Files
 
 | File | Purpose |
-|------|---------|
-| `agent.py` | Configures the NRP model connection, connects to the MCP server, and runs the planning agent. |
-| `mcp_server.py` | Exposes the `get_assignments` MCP tool and its sample assignment data. |
-| `requirements.txt` | Lists the Python dependencies needed to install the prototype. |
-| `.gitignore` | Excludes local credentials, virtual environments, and Python cache files. |
-| `README.md` | Documents setup, usage, test expectations, and limitations. |
+|---|---|
+| `agent.py` | Configures NRP, runs both agents, displays tool activity, and coordinates the handoff. |
+| `mcp_server.py` | Reads syllabus files and exposes `get_assignments`. |
+| `syllabi/algorithms.txt` | Fictional Algorithms assignments. |
+| `syllabi/software_engineering.txt` | Fictional AI Agent Workflows assignments. |
+| `requirements.txt` | Project dependencies. |
+| `.gitignore` | Excludes credentials, virtual environments, and cache files. |
 
 ## Requirements
 
-- Python 3.12, which was used for local testing
-- Internet access to the NRP model endpoint
-- Valid NRP API credentials
-- A model that supports tool calling; this prototype is configured to use `gpt-oss`
-
-Each user must supply their own authorized credentials. API keys are not included in the repository.
+- Python 3.14 was used for the demonstrated M3 runs.
+- Internet access to the NRP endpoint.
+- Authorized NRP credentials and access to `gpt-oss`.
 
 ## Setup
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/J65S/TeamProject5_M2.git
-cd TeamProject5_M2
+git clone https://github.com/J65S/TeamProject5_M3.git
+cd TeamProject5_M3
 ```
 
-### 2. Create a virtual environment
+### 2. Create a virtual environment and install dependencies
 
-**macOS / Linux:**
+macOS / Linux:
 
 ```bash
-python3.12 -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
+python -m pip install -r requirements.txt
 ```
 
-**Windows PowerShell:**
+Windows PowerShell:
 
 ```powershell
-py -3.12 -m venv .venv
-```
-
-Activation is optional when using the explicit Python paths shown below.
-
-### 3. Install dependencies
-
-**macOS / Linux:**
-
-```bash
-./.venv/bin/python -m pip install -r requirements.txt
-```
-
-**Windows PowerShell:**
-
-```powershell
+py -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-### 4. Configure NRP credentials
+### 3. Configure credentials
 
-Create a file named `.env` in the same folder as `agent.py`:
+Create `.env` beside `agent.py`:
 
-```dotenv
+```text
 NRP_BASE_URL=YOUR_NRP_OPENAI_COMPATIBLE_BASE_URL
 NRP_API_KEY=YOUR_NRP_API_KEY
 ```
 
-Replace the placeholders with your authorized endpoint and API key. The endpoint must be the OpenAI-compatible API base URL supplied by your NRP configuration.
+Replace the placeholders with your authorized endpoint and key. Do not commit `.env`.
 
-The `.env` file must remain excluded from Git. Do not commit or share API keys.
+## Run
 
-## Run the Agent
-
-Run the following command from the repository folder.
-
-**macOS / Linux:**
+macOS / Linux, with the environment activated:
 
 ```bash
-./.venv/bin/python agent.py
+python agent.py
 ```
 
-**Windows PowerShell:**
+Windows PowerShell:
 
 ```powershell
 .\.venv\Scripts\python.exe agent.py
 ```
 
-When the prompt appears, enter a request and press Enter:
+When prompted, enter a request:
 
 ```text
-I have 3 hours to study. What should I work on first?
+I have 3 hours and don't know where to start.
 ```
 
-Wait for the model to respond. The script handles one request per run; run it again to try another input.
+The script handles one request per run. It does not accept follow-up answers within the same session.
 
-## MCP Integration
+## Syllabus Format
 
-The agent launches `mcp_server.py` as a local subprocess using `MCPServerStdio`. The agent and server communicate through standard input and output.
+Place `.txt` files in the lowercase `syllabi` folder. Use these exact labels:
 
-The server exposes one tool:
+```text
+COURSE: Example Course
 
-### `get_assignments`
+Task: Complete project outline
+Due: 2026-11-04
+Estimated hours: 2
+```
 
-**Input:** No arguments.
+The parser expects this format and does not process arbitrary syllabi or PDFs. Invalid assignment records are skipped with warnings. Missing folders or files produce an error message.
 
-**Output:** A list of sample assignments containing:
+## Testing and Limitations
 
-- Course name
-- Task description
-- Due date
-- Estimated work time in hours
+Preliminary testing demonstrated assignment retrieval, the two-agent handoff, recognition of missing availability, and handling of missing syllabus files. Adding a new assignment to a syllabus also made it available during the next run without changing the agent code.
 
-The agent instructions require it to call this tool before creating a recommendation. Assignment data comes from the MCP server; the model interprets the student's request and produces the plan.
+Observed limitations include:
 
+- Incorrect workload totals and remaining-time calculations.
+- Suggested schedules that exceed availability or extend beyond deadlines.
+- A tendency to favor assignments that fit the current time window.
+- Occasional empty analyst responses or tool-call text instead of usable analysis.
+- No saved progress, submission tracking, or conversation history.
 
-## Sample Assignment Data
+The code stops on empty analyst output or the specific malformed tool-call text previously observed. It does not independently verify schedule arithmetic or deadline compliance.
 
-| Course | Task | Due Date | Estimated Hours |
-|--------|------|----------|-----------------|
-| Algorithms | Study for sorting quiz | 2026-10-01 | 2 |
-| Senior Project | Write interview summary | 2026-10-04 | 4 |
+Instructions discourage invented assignments and unrealistic schedules, but these constraints are not fully enforced by Python. Students must review recommendations before relying on them. General recovery from network or MCP server failures has not been implemented.
 
-These assignments are demonstration data stored in `mcp_server.py`.
+## CHANGES Since M2
 
-## Manual Test Cases
-
-These cases evaluate expected behavior rather than exact wording because model responses may vary.
-
-| Test | Input | Expected Output |
-|------|-------|-----------------|
-| 1 — Limited time | “I have 1 hour to study. What should I work on?” | Prioritizes the earlier Algorithms task, recommends no more than 1 hour of work, and acknowledges that unfinished work remains. |
-| 2 — No available time | “I have 0 hours available today. What should I do?” | Acknowledges that no work can be scheduled today and suggests a future work block without assigning study or preparation today. |
-| 3 — Sufficient time | “I have 6 hours to study. How should I divide my time?” | Recommends 2 hours for Algorithms and 4 hours for the Senior Project task, totaling no more than 6 hours. |
-
-### Testing Observations
-
-A three-hour run retrieved both sample assignments and recommended two hours for Algorithms and one hour to begin the interview summary.
-
-A zero-hour run acknowledged insufficient time but also suggested gathering materials, which would still require time. This exposed a prompt limitation. Instructions were proposed to explicitly prohibit work or preparation when availability is zero. That behavior must be retested after the prompt change.
-
-The cases above describe expected behavior. They should not be interpreted as a claim that all cases have passed.
-
-## Limitations
-
-- Assignment data is hardcoded and must be updated manually.
-- Estimated task durations are supplied as sample values.
-- The prototype does not account for class schedules, work shifts, breaks, or existing calendar events.
-- The prompt does not explicitly provide the current date, so deadline handling is limited.
-- Recommendations are generated by the model; the code does not independently enforce time allocations or verify every statement.
-- The agent does not save plans, update assignments, or retain conversation history between runs.
-- NRP availability, model access, and network conditions can affect execution.
-- Students must review recommendations before relying on them.
-
+- **Added separate analyst and planner agents** to separate assignment analysis from schedule generation.
+- **Added an explicit handoff** so the planner receives the student's request and analyst findings.
+- **Replaced hard-coded assignments with syllabus files** to support semester-wide assignment data.
+- **Added current-date filtering** to focus retrieval on upcoming assignments.
+- **Added field validation and warnings** to identify invalid syllabus records.
+- **Added visible tool activity** to make retrieval and agent coordination easier to demonstrate.
+- **Added a basic analyst-output check** to stop empty or specific malformed responses from reaching the planner.
+- **Disabled OpenAI trace export** because the prototype uses the NRP endpoint.
 
 ## Milestone Deliverables
 
-This repository contains the agent prototype and its supporting documentation.
+This repository contains the running system and setup documentation.
 
-The architecture diagram, market research, competitive landscape, TAM/SAM assessment, and draft Business Model Canvas belong in the separate report, `TeamProject5_M2.pdf`.
+The architecture diagram, ten-case evaluation plan, operational cost model, sustainability analysis, user testing plan, and contribution evidence are included in the separate report, `TeamProject5_M3.pdf`. A screen recording accompanies the submission to demonstrate the workflow and explain an imperfect moment.
