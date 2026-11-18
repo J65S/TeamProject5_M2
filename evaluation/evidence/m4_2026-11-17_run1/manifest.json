@@ -1,0 +1,43 @@
+{
+  "run_date": "2026-11-17T12:14:28.059200-05:00",
+  "as_of": "2026-10-27",
+  "fixture_git_revision": "30461f1",
+  "application_head": "30461f146ecd440db7008203b1cd968d19f1eeaa",
+  "working_tree_modified": true,
+  "model": "gpt-oss unless NRP_MODEL override (actual returned model recorded)",
+  "calendar": "fictional demo at 09:30 Eastern",
+  "concurrency": 2,
+  "scoring": "Manual against M3 case criteria; first execution only; no selective reruns",
+  "source_sha256": {
+    "taskpilot/__init__.py": "138ff5c7b49e4910c0f3256afd1cc695df3b005329e7cf79d761b7e2be46cd9b",
+    "taskpilot/agent.py": "f3a2b992bc8cba2800d25b25108aedb8a3e8bd8b3a5dab3e0c807e94a51d4f46",
+    "taskpilot/ai_chat.py": "c24b18dff95b5718f0e4bc150c26169c684483cd56ce5f3b4baf0cb9b746c0fd",
+    "taskpilot/calendar_planner.py": "cfb8406423ed1081ebcb6e4864597cd1100af885464d1aa244045b8912c470e7",
+    "taskpilot/calendar_sync.py": "32b0711cc0bcdf11d7cea45319c69eea271d28042e756bad35cfa0aa2a9aded6",
+    "taskpilot/conversation.py": "f9a88d2e50ae855e739bcfda80d33a9bbfb6c0137f56b6bf0fab70c4caac7aa4",
+    "taskpilot/mcp_server.py": "50b4e478b0d535f4561f707182df827ffd223e7f3276bc6f72e52a21d1b4e2af",
+    "taskpilot/paths.py": "4460198ad5ea2c8081449b73b25a4a7c64e98ac21bca338f134ac64d92093241",
+    "taskpilot/voice.py": "9b13ca9f789b9890f929d6a93f7d9165aa3396744c41d11e25a1568846430d40",
+    "taskpilot/web_app.py": "4697c0b7c100f5d0e8141ea3b755eccf434705f80267f48e157867c038279f4a",
+    "taskpilot/workload.py": "311b29f68373c1da110b1b0f92412e40ad46048d1c45dccb434d986aedc3c49e",
+    "evaluation/fixtures/conflicting/tasks.txt": "6da0f786e096735566853b193c4ca9e808b26a9f6bdcc5fe51539dc2e1ac7cf0",
+    "evaluation/fixtures/m3_original/algorithms.txt": "4db250c8c728a2bcebae3b7d50541ea43f3305ab53c51ccc66867133b143e720",
+    "evaluation/fixtures/m3_original/software_engineering.txt": "34d298cec0fbf797960499ac2410a26cc0d07e7fd75b514a5275c0458511fbc0",
+    "evaluation/fixtures/retrieval/algorithms.txt": "4db250c8c728a2bcebae3b7d50541ea43f3305ab53c51ccc66867133b143e720",
+    "evaluation/fixtures/retrieval/software_engineering.txt": "68b1d7bd223bfbc7e2d2ec7d5f8f1e92732111a81e5c0f3baa919405f6be661f",
+    "agent.py": "6b2d63c3dbef61b851cd7ac928277dd46c7a3a0f2e7069fa2757e3c96b0a0d7d",
+    "requirements.txt": "e05c392406240cab69aacaec090091661ab9b7b6bdfb614c3d404791614165cb",
+    "evaluation/run_m3_suite.py": "14d0a6a581aa284231926bc54911bb60a318c8992225e91637a20a7a08242ce6",
+    "evaluation/suite_followup.py": "50a657c93b267a64a15d88aaa18c35fbad33d3e4abb1db5a54179511112e7627"
+  },
+  "fixture_notes": [
+    "Original syllabus bytes recovered from Git 30461f1.",
+    "Controlled planning date 2026-10-27; older tasks explicitly marked complete to reproduce M3 completed-past-work assumption.",
+    "Case 5 uses its defined two-task 3h/8h fixture; case 7 adds the defined 2h poster due November 15.",
+    "Case 8 is an actual two-turn run using its first AI response context/history.",
+    "Case 10 points to a nonexistent folder instead of renaming user data.",
+    "Current app is tested with its fictional calendar at 09:30 Eastern; M3 did not include calendar integration.",
+    "First run only. No application changes or selective reruns during evaluation. Provider/guard errors count as failures except the explicitly expected missing-data guard."
+  ],
+  "review_policy": "Manual human-style review by coding assistant against original case criteria. Available time is elapsed clock time, not an undocumented focus-only budget. Narrow case criteria are scored separately from secondary errors. No critic-agent score was used."
+}

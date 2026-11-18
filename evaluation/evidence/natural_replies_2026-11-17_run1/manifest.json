@@ -1,0 +1,19 @@
+{
+  "purpose": "Repeated reported request with wording gates removed",
+  "source_sha256": {
+    "taskpilot/web_app.py": "55dd16fa712810de4c30bfda9288e476bf9e0e9af0d6d044e937b3a55aaa984b",
+    "taskpilot/paths.py": "4460198ad5ea2c8081449b73b25a4a7c64e98ac21bca338f134ac64d92093241",
+    "taskpilot/calendar_sync.py": "74a8546f65ed0a3f314efddd074b8400b3d0da3b5997676bd98eb9925b71ba9a",
+    "taskpilot/calendar_planner.py": "7b160df886d721167bcba55b156bff2d9e4320a907cef5dfc2018c37612c90be",
+    "taskpilot/ai_chat.py": "6ebf6bfa0a1fc96f04403825bc0f50cfdb20063ecbf4e5332c0655374477b09b",
+    "taskpilot/checked_reply.py": "9fff414b19acf70252836c84c4a837c42f5a7f7d3e121bdf3c9e5650768ec15b",
+    "taskpilot/conversation.py": "f9a88d2e50ae855e739bcfda80d33a9bbfb6c0137f56b6bf0fab70c4caac7aa4",
+    "taskpilot/__init__.py": "138ff5c7b49e4910c0f3256afd1cc695df3b005329e7cf79d761b7e2be46cd9b",
+    "taskpilot/flow.py": "d9615fb08e3f8cf04ffffd12e7d0c34c40a44bb544620f1600690e086de04fb5",
+    "taskpilot/workload.py": "311b29f68373c1da110b1b0f92412e40ad46048d1c45dccb434d986aedc3c49e",
+    "taskpilot/voice.py": "9b13ca9f789b9890f929d6a93f7d9165aa3396744c41d11e25a1568846430d40",
+    "taskpilot/agent.py": "3b8c358daf4ef13cf7e52d964f06270d148f26716066cfbf875def4630885eb2",
+    "taskpilot/grounding.py": "4d1370650a9176e35d259d489cf13014d932fd8bb10443a25536e8f937080525",
+    "taskpilot/mcp_server.py": "50b4e478b0d535f4561f707182df827ffd223e7f3276bc6f72e52a21d1b4e2af"
+  }
+}

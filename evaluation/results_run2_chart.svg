@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="630" viewBox="0 0 1100 630" role="img" aria-labelledby="title desc">
+<title id="title">TaskPilot rerun: 7 of 10 passed</title>
+<desc id="desc">Earlier recorded run: 3 pass, 7 fail. Current rerun: 7 pass, 3 fail. Failures: normal schedule, zero availability and changed availability. Target 9 of 10 is not met.</desc>
+<rect width="1100" height="630" rx="20" fill="#f7f8fc"/><g font-family="Arial, sans-serif">
+<text x="48" y="57" font-size="27" font-weight="700" fill="#283044">TaskPilot · ten-case rerun</text>
+<text x="48" y="88" font-size="15" fill="#657088">Original M3 cases · November 17, 2026 · first attempts on current code</text>
+<text x="48" y="155" font-size="46" font-weight="700" fill="#283044">7 / 10</text>
+<text x="240" y="151" font-size="23" fill="#367e69">70% pass rate · +40 percentage points</text>
+<text x="48" y="190" font-size="15" fill="#657088">Three full-response failures remain. Readiness target: 90%.</text>
+<text x="48" y="258" font-size="16" fill="#47536a">Earlier M4 run</text>
+<rect x="210" y="235" width="700" height="32" rx="7" fill="#e8ebf2"/>
+<rect x="210" y="235" width="210" height="32" rx="7" fill="#8a96ac"/>
+<text x="930" y="258" font-size="19" font-weight="700" fill="#283044">30%</text>
+<text x="48" y="318" font-size="16" fill="#47536a">Current rerun</text>
+<rect x="210" y="295" width="700" height="32" rx="7" fill="#e8ebf2"/>
+<rect x="210" y="295" width="490" height="32" rx="7" fill="#367e69"/>
+<text x="930" y="318" font-size="19" font-weight="700" fill="#283044">70%</text>
+<line x1="840" y1="220" x2="840" y2="337" stroke="#7359bb" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="808" y="363" font-size="12" fill="#7359bb">90% target</text>
+<rect x="48" y="394" width="88" height="75" rx="9" fill="#b84f58"/>
+<text x="92" y="421" font-size="13" fill="white" text-anchor="middle">TC01</text>
+<text x="92" y="451" font-size="16" font-weight="700" fill="white" text-anchor="middle">FAIL</text>
+<rect x="148" y="394" width="88" height="75" rx="9" fill="#367e69"/>
+<text x="192" y="421" font-size="13" fill="white" text-anchor="middle">TC02</text>
+<text x="192" y="451" font-size="16" font-weight="700" fill="white" text-anchor="middle">PASS</text>
+<rect x="248" y="394" width="88" height="75" rx="9" fill="#b84f58"/>
+<text x="292" y="421" font-size="13" fill="white" text-anchor="middle">TC03</text>
+<text x="292" y="451" font-size="16" font-weight="700" fill="white" text-anchor="middle">FAIL</text>
+<rect x="348" y="394" width="88" height="75" rx="9" fill="#367e69"/>
+<text x="392" y="421" font-size="13" fill="white" text-anchor="middle">TC04</text>
+<text x="392" y="451" font-size="16" font-weight="700" fill="white" text-anchor="middle">PASS</text>
+<rect x="448" y="394" width="88" height="75" rx="9" fill="#367e69"/>
+<text x="492" y="421" font-size="13" fill="white" text-anchor="middle">TC05</text>
+<text x="492" y="451" font-size="16" font-weight="700" fill="white" text-anchor="middle">PASS</text>
+<rect x="548" y="394" width="88" height="75" rx="9" fill="#367e69"/>
+<text x="592" y="421" font-size="13" fill="white" text-anchor="middle">TC06</text>
+<text x="592" y="451" font-size="16" font-weight="700" fill="white" text-anchor="middle">PASS</text>
+<rect x="648" y="394" width="88" height="75" rx="9" fill="#367e69"/>
+<text x="692" y="421" font-size="13" fill="white" text-anchor="middle">TC07</text>
+<text x="692" y="451" font-size="16" font-weight="700" fill="white" text-anchor="middle">PASS</text>
+<rect x="748" y="394" width="88" height="75" rx="9" fill="#b84f58"/>
+<text x="792" y="421" font-size="13" fill="white" text-anchor="middle">TC08</text>
+<text x="792" y="451" font-size="16" font-weight="700" fill="white" text-anchor="middle">FAIL</text>
+<rect x="848" y="394" width="88" height="75" rx="9" fill="#367e69"/>
+<text x="892" y="421" font-size="13" fill="white" text-anchor="middle">TC09</text>
+<text x="892" y="451" font-size="16" font-weight="700" fill="white" text-anchor="middle">PASS</text>
+<rect x="948" y="394" width="88" height="75" rx="9" fill="#367e69"/>
+<text x="992" y="421" font-size="13" fill="white" text-anchor="middle">TC10</text>
+<text x="992" y="451" font-size="16" font-weight="700" fill="white" text-anchor="middle">PASS</text>
+<text x="48" y="510" font-size="14" fill="#47536a">Failures: TC01 normal-schedule narration · TC03 zero-time preparation · TC08 follow-up advice</text>
+<text x="48" y="540" font-size="13" fill="#657088">Checked allocations fit the limits; inconsistent AI prose still counts against the full response.</text>
+<text x="48" y="566" font-size="13" fill="#657088">One observed run. Model settings changed with the implementation; individual effects are not isolated.</text>
+<text x="48" y="592" font-size="13" fill="#657088">Raw evidence and manual reasoning are preserved; no failures were selectively replaced.</text>
+</g></svg>

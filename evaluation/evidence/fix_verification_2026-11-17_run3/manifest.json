@@ -1,0 +1,23 @@
+{
+  "purpose": "Targeted fix verification, not a ten-case score",
+  "started_at": "2026-11-17T12:38:22.319414",
+  "source_sha256": {
+    "taskpilot/web_app.py": "4697c0b7c100f5d0e8141ea3b755eccf434705f80267f48e157867c038279f4a",
+    "taskpilot/paths.py": "4460198ad5ea2c8081449b73b25a4a7c64e98ac21bca338f134ac64d92093241",
+    "taskpilot/calendar_sync.py": "32b0711cc0bcdf11d7cea45319c69eea271d28042e756bad35cfa0aa2a9aded6",
+    "taskpilot/calendar_planner.py": "2024575d95689550e7e3bdc4ca506dca5577c53ba3f953b9151bc7a2b42f1206",
+    "taskpilot/ai_chat.py": "a1c8b1ac3ed84f27b37f491541f9501c33a363bcfdc6920715c8b5d4334a3fa7",
+    "taskpilot/conversation.py": "f9a88d2e50ae855e739bcfda80d33a9bbfb6c0137f56b6bf0fab70c4caac7aa4",
+    "taskpilot/__init__.py": "138ff5c7b49e4910c0f3256afd1cc695df3b005329e7cf79d761b7e2be46cd9b",
+    "taskpilot/workload.py": "311b29f68373c1da110b1b0f92412e40ad46048d1c45dccb434d986aedc3c49e",
+    "taskpilot/voice.py": "9b13ca9f789b9890f929d6a93f7d9165aa3396744c41d11e25a1568846430d40",
+    "taskpilot/agent.py": "f3a2b992bc8cba2800d25b25108aedb8a3e8bd8b3a5dab3e0c807e94a51d4f46",
+    "taskpilot/grounding.py": "5e30e93d8bb845b26e406f85d0fc29f88c569f74c8b7b04768f76990965a91b0",
+    "taskpilot/mcp_server.py": "50b4e478b0d535f4561f707182df827ffd223e7f3276bc6f72e52a21d1b4e2af",
+    "evaluation/fixtures/m3_original/software_engineering.txt": "34d298cec0fbf797960499ac2410a26cc0d07e7fd75b514a5275c0458511fbc0",
+    "evaluation/fixtures/m3_original/algorithms.txt": "4db250c8c728a2bcebae3b7d50541ea43f3305ab53c51ccc66867133b143e720",
+    "evaluation/fixtures/conflicting/tasks.txt": "6da0f786e096735566853b193c4ca9e808b26a9f6bdcc5fe51539dc2e1ac7cf0",
+    "evaluation/fixtures/retrieval/software_engineering.txt": "68b1d7bd223bfbc7e2d2ec7d5f8f1e92732111a81e5c0f3baa919405f6be661f",
+    "evaluation/fixtures/retrieval/algorithms.txt": "4db250c8c728a2bcebae3b7d50541ea43f3305ab53c51ccc66867133b143e720"
+  }
+}

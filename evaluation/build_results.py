@@ -1,0 +1,87 @@
+"""Publish manually reviewed first-run M3 evaluation evidence and a chart.
+This script formats recorded judgments; it does not infer success from exit codes.
+"""
+import csv
+from datetime import datetime
+import hashlib
+from html import escape
+import json
+from pathlib import Path
+import sys
+
+ROOT=Path(__file__).resolve().parent.parent
+RUN=ROOT/'evaluation/evidence/m4_2026-11-17_run1'
+sys.path.insert(0,str(ROOT))
+from evaluation.run_m3_suite import PROMPTS
+
+REVIEW={
+'TC01': ('Normal schedule','Prioritize upcoming work; stay within the four hours available today (240 minutes); accurately describe unfinished work.','FAIL','240 focus minutes are placed from Oct 27 20:15 to Oct 28 18:35 (1,340 elapsed minutes). The model adds an unrequested after-last-event constraint and moves work into tomorrow; the prose also misdescribes the M3 blocks.','Reasoning and calendar scheduling','Today/availability constraints are not enforced end to end; the calendar scheduler searches subsequent days and the narrator does not accurately explain the result.'),
+'TC02': ('Limited availability','Schedule no more than 60 minutes within the stated available hour and acknowledge unfinished work.','FAIL','60 focus minutes require a 70-minute clock window (10:30–11:40) because of a break. The answer calls this a one-hour window and incorrectly says it is the only free slot today. Remaining workload is present in the JSON but not explained in the answer.','Scheduling and answer grounding','The implementation treats availability as focus time without obtaining agreement for extra break/gap time; prose adds an unsupported availability claim.'),
+'TC03': ('Zero availability','Assign no study or preparation work today.','PASS','No plan or work blocks are produced. The answer acknowledges zero time today and asks whether another day should be considered.','None for the defined criterion','The context loses the numeric zero (minutes becomes null), but no work is assigned; that secondary limitation does not fail the original zero-work criterion.'),
+'TC04': ('Missing availability','Ask for available hours without assuming a budget or producing a concrete schedule.','FAIL','No clarification reaches the user. The worker returns an intent-validation error: AI attempted to schedule without availability; CLI exits 1.','Reasoning and input handling','The guard correctly prevents an unsafe schedule, but the system fails to return the required clarifying question.'),
+'TC05': ('Conflicting deadlines','Two tasks due Oct 28 require 3 and 8 hours: recognize 11 total hours, explain prioritization, stay within 180 available minutes today, and flag work at risk of lateness.','FAIL','The AI restricts planning to the three-hour task, drops the eight-hour task, and reports no unfinished work. Its 180 focus minutes extend into Oct 28. The answer never recognizes the 11-hour total or explains the shortage.','Reasoning, task scope, and scheduling','An invented scope restriction hides eight hours of work; remaining-work accounting is correct only for the wrongly narrowed scope.'),
+'TC06': ('Agent handoff','Execute a source tool call/result, one handoff containing the request and analyst findings, and one final advisor response.','PASS','Instrumented evidence records one MCP tool result, handoff=true, and advisor_returned=true. The JSON includes interpreted request context and source snapshot. A single final AI answer is returned.','None for the defined handoff criterion','This is a handoff pass only. The answer describes 115 of the 120 focus minutes and misleadingly calls separated blocks a two-hour window. Full internal messages are not exported; handoff evidence is instrumentation plus the hashed implementation.'),
+'TC07': ('Knowledge retrieval','Add Prepare TaskPilot poster, due 2026-11-15, estimated 2 hours; retrieve correct course/date/hours/source and preserve those details in the analysis/answer.','FAIL','The source snapshot contains the new poster record with correct fields, but the AI answers with a study plan for Trees and heaps and never mentions the poster or provides the requested upcoming-assignment overview.','Intent interpretation and response grounding','File retrieval works at the data level; the agent selects the wrong response action and fails to surface the retrieved record.'),
+'TC08': ('Changed availability','After an actual four-hour interaction, use the new 120-minute availability, identify unfinished work, and provide a plan fitting that availability.','FAIL','The follow-up preserves context and changes the focus budget to 120 minutes, but the resulting plan runs 17:15–20:55 (220 elapsed minutes). It also carries forward an after-work restriction invented in the initial turn. Unfinished work is present in JSON.','Scheduling and conversational constraint handling','The numeric update works, but available clock time is confused with focus time and an unsupported constraint persists. The initial four-hour response also incorrectly claims it finishes by 22:00 despite blocks tomorrow.'),
+'TC09': ('Insufficient time','Explain the shortage, propose no more than 60 minutes of work, and calculate remaining work correctly.','FAIL','The answer correctly says one hour is insufficient, but provides no plan and no numeric remaining-work calculation. It asks which task feels urgent and drops the explicit hour from structured context.','Reasoning and incomplete answer','The general shortage is recognized, but the required remaining-work estimate (62 hours after one hour against a 63-hour source workload) is not produced.'),
+'TC10': ('Missing syllabus data','Report unavailable data without inventing assignments or an unhandled crash.','PASS','The CLI reports that no .txt syllabus files exist at the controlled missing path and exits cleanly with expected code 2, without an AI call or invented plan.','None for the defined missing-data criterion','This is a local input-guard pass, not evidence of a successful two-agent inference.'),
+}
+
+
+def clock_span(result):
+    blocks=(result.get('plan') or {}).get('blocks',[])
+    if not blocks: return None
+    return int((max(datetime.fromisoformat(b['end']) for b in blocks)-min(datetime.fromisoformat(b['start']) for b in blocks)).total_seconds()/60)
+
+
+def main():
+    manifest=json.loads((RUN/'manifest.json').read_text())
+    for name in ('agent.py','requirements.txt','evaluation/run_m3_suite.py','evaluation/suite_followup.py'):
+        manifest['source_sha256'][name]=hashlib.sha256((ROOT/name).read_bytes()).hexdigest()
+    manifest['fixture_notes']=['Original syllabus bytes recovered from Git 30461f1.','Controlled planning date 2026-10-27; older tasks explicitly marked complete to reproduce M3 completed-past-work assumption.','Case 5 uses its defined two-task 3h/8h fixture; case 7 adds the defined 2h poster due November 15.','Case 8 is an actual two-turn run using its first AI response context/history.','Case 10 points to a nonexistent folder instead of renaming user data.','Current app is tested with its fictional calendar at 09:30 Eastern; M3 did not include calendar integration.','First run only. No application changes or selective reruns during evaluation. Provider/guard errors count as failures except the explicitly expected missing-data guard.']
+    manifest['review_policy']='Manual human-style review by coding assistant against original case criteria. Available time is elapsed clock time, not an undocumented focus-only budget. Narrow case criteria are scored separately from secondary errors. No critic-agent score was used.'
+    (RUN/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
+    rows=[]
+    for case,(name,expected,status,summary,cause,analysis) in REVIEW.items():
+        raw=json.loads((RUN/f'{case}.json').read_text());result=raw.get('result') or {}
+        elapsed=raw['elapsed_seconds']
+        if case=='TC08': elapsed+=json.loads((RUN/'TC08_initial.json').read_text())['elapsed_seconds']
+        setup=''
+        if case=='TC05': setup='SETUP: Two assignments due 2026-10-28, requiring 3 and 8 hours. '
+        if case=='TC07': setup='SETUP: Original source plus Prepare TaskPilot poster, due 2026-11-15, 2 hours. '
+        if case=='TC08': setup='PRIOR TURN: '+PROMPTS['TC01']+'\nFOLLOW-UP: '
+        if case=='TC10': setup='SETUP: Nonexistent syllabus folder. '
+        rows.append(dict(case_id=case,input=setup+PROMPTS[case],expected_output=expected,actual_output=raw['stdout'].strip() or raw['stderr'].strip(),pass_fail=status,evidence_path=f'evaluation/evidence/{RUN.name}/{case}.json',version_commit=manifest['application_head']+'+uncommitted-working-tree (see SHA-256 manifest)',run_date=manifest['run_date'],critic_score='N/A - manual review',case_name=name,actual_summary=summary,root_cause=cause,failure_analysis=analysis,elapsed_seconds=round(elapsed,3),focus_minutes=(result.get('plan') or {}).get('scheduled_minutes'),clock_span_minutes=clock_span(result)))
+    with (ROOT/'evaluation/results.csv').open('w',newline='') as f:
+        writer=csv.DictWriter(f,fieldnames=list(rows[0]));writer.writeheader();writer.writerows(rows)
+    passed=sum(r['pass_fail']=='PASS' for r in rows)
+    lines=['# M4: original ten-case evaluation — first live run','',f'**Result: {passed}/10 passed ({passed*10}%). Seven failures.** The committed readiness threshold is 9/10. It was not met.','', 'Run date: November 17, 2026. Model: gpt-oss; reasoning effort: low. Two agents with real NRP inference and MCP retrieval. Cases used the uncommitted refined application identified by the source hashes in the [manifest](evidence/'+RUN.name+'/manifest.json).','', '## Method and scoring','', '- Test inputs and criteria come from submitted M3 Section 4.3. This is an executed evaluation, separate from local regression tests.', '- The fixed as-of date is October 27, 2026. Original files were recovered from Git 30461f1. Older work was explicitly marked complete, matching M3’s past-work assumption. The December demo data was not substituted.', '- Current fictional calendar events were retained because they are part of the current application. This and the controlled date/explicit completion flags are disclosed adaptations. Case 10 uses a missing path instead of renaming the project folder.', '- Each case was run once; TC08 includes a real initial turn plus follow-up. Two independent requests ran concurrently. No selective reruns or application fixes were performed during the run.', '- PASS means all stated primary criteria were met. A clean process exit or correct focus-time sum alone does not establish success. A stated available hour means an hour of elapsed availability; extra breaks or gaps require confirmation. TC02 and TC08 meet a narrower focus-minutes-only check, but fail the original availability interpretation and contain misleading timing/context claims.', '- Handoff and zero-availability cases are scored on their defined criteria; secondary problems are still recorded. TC10 is an expected local guard response, not an AI inference success.', '- Assessment is manual review by the coding assistant, not an independent student/critic-agent rating. No numerical critic scores were invented. The finite time-range guard does not validate every factual claim in AI prose.','', '## Case chart','', '| Case | Test | Outcome | Observed result |','|---|---|---|---|']
+    for r in rows: lines.append(f"| {r['case_id']} | {r['case_name']} | **{r['pass_fail']}** | {r['actual_summary']} |")
+    lines += ['', '![Evaluation summary](results_chart.svg)','', '## Inputs, actual responses, and failure analysis','']
+    for r in rows:
+        result=json.loads((RUN/f"{r['case_id']}.json").read_text()).get('result') or {}
+        answer=result.get('answer') or result.get('error') or r['actual_output']
+        lines += [f"### {r['case_id']} — {r['case_name']} — {r['pass_fail']}", '', '**Input/setup:** '+r['input'], '', '**Expected:** '+r['expected_output'], '', '**Actual AI answer or error:**','']
+        lines += ['> '+line if line else '>' for line in answer.splitlines()]
+        if result.get('follow_up'): lines += ['> '+result['follow_up']]
+        lines += ['', '**Observed output:** '+r['actual_summary'], '', '**Root cause:** '+r['root_cause']+'. '+r['failure_analysis'], '', f"**Capture time:** {r['elapsed_seconds']} s"+(f"; focus minutes: {r['focus_minutes']}; elapsed calendar span: {r['clock_span_minutes']} minutes." if r['focus_minutes'] is not None else '.'), '', f"[Full raw output and command](evidence/{RUN.name}/{r['case_id']}.json)", '']
+    attempts=[json.loads(p.read_text()) for p in RUN.glob('TC*.json') if 'input' not in p.name]
+    ai_attempts=[r for r in attempts if r['result'] and r['result'].get('engine') in ('two_agent_ai','ai_unavailable')]
+    successful=[r for r in ai_attempts if r['exit_code']==0]
+    fast=sum(r['elapsed_seconds']<=60 for r in successful)
+    lines += ['## Performance and baseline context','',f'{len(ai_attempts)} AI turns were attempted (TC08 has two turns). {len(successful)} returned a completed AI reply; {fast} successful turns finished within 60 seconds. All attempts returned within 60 seconds, including the failed intent-validation request; fast failure is not counted as a usable answer. TC10 exited locally without an AI call.', '', 'M3 reported 7/10 (70%), with handoff evidence reused from its retrieval test and acknowledged errors outside individual case criteria. This run is 3/10 (30%), an observed difference of **−40 percentage points**. It is not a controlled causal estimate: the calendar workflow, clock assumptions, instrumented outputs and application implementation differ. Individual change impacts were not isolated or measured.', '', '## What needs attention before claiming readiness','', '1. Treat a student’s stated available time as an elapsed-time constraint, including breaks and calendar gaps, or ask permission to split it. Enforce “today.”', '2. Preserve explicit availability and avoid inventing after-work/end-of-day restrictions.', '3. Prevent task filters from hiding other workload, especially shared deadlines; show correct totals and remaining work.', '4. Return a clarification when availability is missing, and answer assignment-list queries with retrieved facts.', '5. Check prose against the whole verified plan: dates, block counts/durations, windows, and workload claims.', '', 'These are findings, not fixes performed during the evaluation. Keep this run as the baseline for a separately labeled rerun after changes.']
+    (ROOT/'evaluation/results.md').write_text('\n'.join(lines)+'\n')
+    # Standalone vector chart, suitable for the report without plotting dependencies.
+    width,height=1100,610
+    parts=[f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" style="max-width:100%;height:auto" role="img" aria-labelledby="title desc">','<title id="title">TaskPilot original ten-case evaluation: 3 pass, 7 fail</title>','<desc id="desc">Reported M3 baseline 70 percent, current live evaluation 30 percent. Passes: cases 3, 6, 10. Historical baseline is not a controlled causal comparison.</desc>','<rect width="1100" height="610" rx="20" fill="#f7f8fc"/>','<g font-family="Arial, sans-serif">','<text x="48" y="58" fill="#283044" font-size="27" font-weight="700">TaskPilot · M4 evaluation</text>','<text x="48" y="88" fill="#657088" font-size="15">Original ten cases · November 17, 2026 · first live run</text>','<text x="48" y="156" fill="#283044" font-size="46" font-weight="700">3 / 10</text>','<text x="228" y="151" fill="#b34248" font-size="23">30% pass rate · 7 failures</text>','<text x="48" y="190" fill="#657088" font-size="15">Readiness target: 90% — not met</text>']
+    for y,label,value,color in [(244,'M3 reported',70,'#8a96ac'),(305,'M4 observed',passed*10,'#bd555d')]:
+        parts += [f'<text x="48" y="{y+23}" font-size="16" fill="#47536a">{label}</text>',f'<rect x="210" y="{y}" width="700" height="32" rx="7" fill="#e8ebf2"/>',f'<rect x="210" y="{y}" width="{7*value}" height="32" rx="7" fill="{color}"/>',f'<text x="930" y="{y+23}" font-size="19" fill="#283044" font-weight="700">{value}%</text>']
+    parts += ['<line x1="840" y1="229" x2="840" y2="348" stroke="#7359bb" stroke-dasharray="5 4" stroke-width="2"/>','<text x="808" y="371" fill="#7359bb" font-size="12">90% target</text>']
+    for i,r in enumerate(rows):
+        x=48+i*100;color='#367e69' if r['pass_fail']=='PASS' else '#b84f58'
+        parts += [f'<rect x="{x}" y="404" width="88" height="75" rx="9" fill="{color}"/>',f'<text x="{x+44}" y="431" fill="white" font-size="13" text-anchor="middle">{r["case_id"]}</text>',f'<text x="{x+44}" y="461" fill="white" font-size="16" text-anchor="middle" font-weight="700">{r["pass_fail"]}</text>']
+    parts += ['<text x="48" y="521" fill="#657088" font-size="13">Available time is scored as elapsed clock time; focus-only checks are reported separately.</text>','<text x="48" y="545" fill="#657088" font-size="13">M3 is the historical reported baseline; this is not a controlled attribution of change effects.</text>','<text x="48" y="569" fill="#657088" font-size="13">Full inputs, actual outputs, judgments and evidence: evaluation/results.csv and results.md</text>','</g></svg>']
+    (ROOT/'evaluation/results_chart.svg').write_text('\n'.join(parts)+'\n')
+    print(f'Published {passed}/10 pass results, CSV, Markdown, and SVG chart.')
+
+if __name__=='__main__': main()

@@ -1,0 +1,37 @@
+{
+  "message": "Yeah that works",
+  "seconds": 0.0,
+  "result": {
+    "answer": "Got it \u2013 I\u2019ll start at 10:30\u202fAM with the tree vs. heap comparison.",
+    "follow_up": "",
+    "suggestions": [],
+    "plan": null,
+    "calendar": null,
+    "kind": "acknowledgment",
+    "minutes": 180,
+    "context": {
+      "action": "plan",
+      "minutes": 180,
+      "after_last_event": false,
+      "not_before": null,
+      "day": "2026-11-17",
+      "task_ids": [],
+      "restrict_tasks": false,
+      "summary": "Suggest 3\u2011hour work slot after work shift",
+      "request_kind": "plan",
+      "clarification_reason": "",
+      "max_windows": 1,
+      "awaiting": null,
+      "_grounded": true
+    },
+    "model": "gpt-oss",
+    "engine": "ai_cached_confirmation",
+    "as_of": "2026-11-17",
+    "evidence": {
+      "cached_ai_reply": true,
+      "new_inference": false,
+      "handoff": false,
+      "analyst_tool_outputs": 0
+    }
+  }
+}

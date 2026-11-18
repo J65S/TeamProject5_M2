@@ -1,0 +1,973 @@
+{
+  "message": "Use another opening today",
+  "seconds": 77.433,
+  "result": {
+    "as_of": "2026-11-17",
+    "assignment_snapshot": {
+      "today": "2026-11-17",
+      "assignments": [
+        {
+          "id": "ALG-01",
+          "course": "COT 3400 \u2014 Algorithms and Data Structures",
+          "task": "Big-O analysis worksheet",
+          "due_date": "2026-12-01",
+          "estimated_hours": 1.0,
+          "estimated_minutes": 0,
+          "source_file": "algorithms.txt",
+          "overdue": false,
+          "description": "Classify time and space complexity for short code examples.",
+          "status": "completed",
+          "due_time": "23:59",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-01T23:59:00-05:00",
+          "can_split": true,
+          "dependencies": [],
+          "first_step": "Review the completed complexity table.",
+          "demo_offset_days": 0,
+          "fixed_due_date": "2026-12-01",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "ALG-02",
+          "course": "COT 3400 \u2014 Algorithms and Data Structures",
+          "task": "Recursion practice problems",
+          "due_date": "2026-12-01",
+          "estimated_hours": 1.5,
+          "estimated_minutes": 0,
+          "source_file": "algorithms.txt",
+          "overdue": false,
+          "description": "Trace recursive calls and solve recurrence examples.",
+          "status": "completed",
+          "due_time": "23:59",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-01T23:59:00-05:00",
+          "can_split": true,
+          "dependencies": [],
+          "first_step": "Review the completed recursion traces.",
+          "demo_offset_days": 0,
+          "fixed_due_date": "2026-12-01",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "CEN-01",
+          "course": "CEN 4930 \u2014 AI Agent Workflows",
+          "task": "Agent use-case proposal",
+          "due_date": "2026-12-01",
+          "estimated_hours": 1.0,
+          "estimated_minutes": 0,
+          "source_file": "software_engineering.txt",
+          "overdue": false,
+          "description": "Describe the target student, their planning problem, and the agent\u2019s job.",
+          "status": "completed",
+          "due_time": "23:59",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-01T23:59:00-05:00",
+          "can_split": true,
+          "dependencies": [],
+          "first_step": "Review the completed proposal if context is needed.",
+          "demo_offset_days": 0,
+          "fixed_due_date": "2026-12-01",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "CEN-02",
+          "course": "CEN 4930 \u2014 AI Agent Workflows",
+          "task": "Build a single-agent prototype",
+          "due_date": "2026-12-01",
+          "estimated_hours": 2.0,
+          "estimated_minutes": 0,
+          "source_file": "software_engineering.txt",
+          "overdue": false,
+          "description": "Create the initial agent and verify a basic assignment-retrieval tool.",
+          "status": "completed",
+          "due_time": "23:59",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-01T23:59:00-05:00",
+          "can_split": true,
+          "dependencies": [],
+          "first_step": "Review the saved working prototype.",
+          "demo_offset_days": 0,
+          "fixed_due_date": "2026-12-01",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "ALG-04",
+          "course": "COT 3400 \u2014 Algorithms and Data Structures",
+          "task": "Exam 1 preparation",
+          "due_date": "2026-12-02",
+          "estimated_hours": 2.0,
+          "estimated_minutes": 0,
+          "source_file": "algorithms.txt",
+          "overdue": false,
+          "description": "Review algorithm analysis, recursion, and sorting topics.",
+          "status": "completed",
+          "due_time": "23:59",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-02T23:59:00-05:00",
+          "can_split": true,
+          "dependencies": [],
+          "first_step": "Check the saved review notes.",
+          "demo_offset_days": 1,
+          "fixed_due_date": "2026-12-02",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "ALG-03",
+          "course": "COT 3400 \u2014 Algorithms and Data Structures",
+          "task": "Sorting algorithms quiz preparation",
+          "due_date": "2026-12-02",
+          "estimated_hours": 1.0,
+          "estimated_minutes": 0,
+          "source_file": "algorithms.txt",
+          "overdue": false,
+          "description": "Compare sorting algorithms and practice complexity questions.",
+          "status": "completed",
+          "due_time": "23:59",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-02T23:59:00-05:00",
+          "can_split": true,
+          "dependencies": [],
+          "first_step": "Review the existing sorting comparison sheet.",
+          "demo_offset_days": 1,
+          "fixed_due_date": "2026-12-02",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "CEN-03",
+          "course": "CEN 4930 \u2014 AI Agent Workflows",
+          "task": "M2 team project prototype",
+          "due_date": "2026-12-02",
+          "estimated_hours": 3.0,
+          "estimated_minutes": 0,
+          "source_file": "software_engineering.txt",
+          "overdue": false,
+          "description": "Document the early prototype and its market assumptions.",
+          "status": "completed",
+          "due_time": "23:59",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-02T23:59:00-05:00",
+          "can_split": true,
+          "dependencies": [],
+          "first_step": "Review the submitted demonstration materials.",
+          "demo_offset_days": 1,
+          "fixed_due_date": "2026-12-02",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "CEN-04",
+          "course": "CEN 4930 \u2014 AI Agent Workflows",
+          "task": "Multi-agent workflow assignment",
+          "due_date": "2026-12-02",
+          "estimated_hours": 2.0,
+          "estimated_minutes": 0,
+          "source_file": "software_engineering.txt",
+          "overdue": false,
+          "description": "Separate assignment analysis and scheduling with an explicit handoff.",
+          "status": "completed",
+          "due_time": "23:59",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-02T23:59:00-05:00",
+          "can_split": true,
+          "dependencies": [],
+          "first_step": "Review the existing handoff implementation.",
+          "demo_offset_days": 1,
+          "fixed_due_date": "2026-12-02",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "CEN-05",
+          "course": "CEN 4930 \u2014 AI Agent Workflows",
+          "task": "Reasoning and RAG assignment",
+          "due_date": "2026-12-02",
+          "estimated_hours": 2.0,
+          "estimated_minutes": 0,
+          "source_file": "software_engineering.txt",
+          "overdue": false,
+          "description": "Ground agent responses in retrieved assignment records.",
+          "status": "completed",
+          "due_time": "23:59",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-02T23:59:00-05:00",
+          "can_split": true,
+          "dependencies": [],
+          "first_step": "Review the retrieval example and source references.",
+          "demo_offset_days": 1,
+          "fixed_due_date": "2026-12-02",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "ALG-06",
+          "course": "COT 3400 \u2014 Algorithms and Data Structures",
+          "task": "Trees and heaps quiz preparation",
+          "due_date": "2026-12-03",
+          "estimated_hours": 0.75,
+          "estimated_minutes": 45,
+          "source_file": "algorithms.txt",
+          "overdue": false,
+          "description": "Review tree properties and heap operations using practice questions.",
+          "status": "not_started",
+          "due_time": "18:00",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-03T18:00:00-05:00",
+          "can_split": true,
+          "dependencies": [],
+          "first_step": "Spend ten minutes comparing a binary search tree with a binary heap.",
+          "demo_offset_days": 2,
+          "fixed_due_date": "2026-12-03",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "ALG-05",
+          "course": "COT 3400 \u2014 Algorithms and Data Structures",
+          "task": "Binary tree traversal worksheet",
+          "due_date": "2026-12-03",
+          "estimated_hours": 1.0,
+          "estimated_minutes": 0,
+          "source_file": "algorithms.txt",
+          "overdue": false,
+          "description": "Write preorder, inorder, and postorder traversals for sample trees.",
+          "status": "completed",
+          "due_time": "23:59",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-03T23:59:00-05:00",
+          "can_split": true,
+          "dependencies": [],
+          "first_step": "Review the completed traversal examples.",
+          "demo_offset_days": 2,
+          "fixed_due_date": "2026-12-03",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "CEN-07",
+          "course": "CEN 4930 \u2014 AI Agent Workflows",
+          "task": "Evaluation test-case preparation",
+          "due_date": "2026-12-03",
+          "estimated_hours": 1.0,
+          "estimated_minutes": 0,
+          "source_file": "software_engineering.txt",
+          "overdue": false,
+          "description": "Prepare the original ten cases and their acceptance criteria.",
+          "status": "completed",
+          "due_time": "23:59",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-03T23:59:00-05:00",
+          "can_split": true,
+          "dependencies": [],
+          "first_step": "Open the prepared case list.",
+          "demo_offset_days": 2,
+          "fixed_due_date": "2026-12-03",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "CEN-06",
+          "course": "CEN 4930 \u2014 AI Agent Workflows",
+          "task": "M3 multi-agent system and cost analysis",
+          "due_date": "2026-12-03",
+          "estimated_hours": 3.0,
+          "estimated_minutes": 0,
+          "source_file": "software_engineering.txt",
+          "overdue": false,
+          "description": "Document the architecture, evaluation commitments, and operating-cost assumptions.",
+          "status": "completed",
+          "due_time": "23:59",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-03T23:59:00-05:00",
+          "can_split": true,
+          "dependencies": [],
+          "first_step": "Open the existing M3 evaluation plan when preparing the next task.",
+          "demo_offset_days": 2,
+          "fixed_due_date": "2026-12-03",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "ALG-08",
+          "course": "COT 3400 \u2014 Algorithms and Data Structures",
+          "task": "Graph traversal practice problems",
+          "due_date": "2026-12-04",
+          "estimated_hours": 2.0,
+          "estimated_minutes": 60,
+          "source_file": "algorithms.txt",
+          "overdue": false,
+          "description": "Finish breadth-first and depth-first traversal exercises.",
+          "status": "in_progress",
+          "due_time": "23:59",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-04T23:59:00-05:00",
+          "can_split": true,
+          "dependencies": [],
+          "first_step": "Choose one unfinished graph and trace the BFS queue by hand.",
+          "demo_offset_days": 3,
+          "fixed_due_date": "2026-12-04",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "ALG-07",
+          "course": "COT 3400 \u2014 Algorithms and Data Structures",
+          "task": "Heap implementation assignment",
+          "due_date": "2026-12-04",
+          "estimated_hours": 3.0,
+          "estimated_minutes": 90,
+          "source_file": "algorithms.txt",
+          "overdue": false,
+          "description": "Finish insert and remove operations and test heap invariants.",
+          "status": "in_progress",
+          "due_time": "23:59",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-04T23:59:00-05:00",
+          "can_split": true,
+          "dependencies": [],
+          "first_step": "Run the current tests and identify the first failing heap operation.",
+          "demo_offset_days": 3,
+          "fixed_due_date": "2026-12-04",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "CEN-08",
+          "course": "CEN 4930 \u2014 AI Agent Workflows",
+          "task": "Run agent evaluation suite",
+          "due_date": "2026-12-04",
+          "estimated_hours": 3.0,
+          "estimated_minutes": 90,
+          "source_file": "software_engineering.txt",
+          "overdue": false,
+          "description": "Execute each committed test case, save actual outputs, and analyze failures.",
+          "status": "in_progress",
+          "due_time": "23:59",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-04T23:59:00-05:00",
+          "can_split": true,
+          "dependencies": [
+            "CEN-07"
+          ],
+          "first_step": "Run the next unexecuted case and save its actual output before judging it.",
+          "demo_offset_days": 3,
+          "fixed_due_date": "2026-12-04",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "ALG-09",
+          "course": "COT 3400 \u2014 Algorithms and Data Structures",
+          "task": "Shortest path algorithms assignment",
+          "due_date": "2026-12-05",
+          "estimated_hours": 2.0,
+          "estimated_minutes": 120,
+          "source_file": "algorithms.txt",
+          "overdue": false,
+          "description": "Implement Dijkstra\u2019s algorithm and explain its complexity.",
+          "status": "not_started",
+          "due_time": "23:59",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-05T23:59:00-05:00",
+          "can_split": true,
+          "dependencies": [
+            "ALG-08"
+          ],
+          "first_step": "Read the requirements and identify the graph representation.",
+          "demo_offset_days": 4,
+          "fixed_due_date": "2026-12-05",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "CEN-09",
+          "course": "CEN 4930 \u2014 AI Agent Workflows",
+          "task": "User testing sessions and notes",
+          "due_date": "2026-12-05",
+          "estimated_hours": 1.0,
+          "estimated_minutes": 60,
+          "source_file": "software_engineering.txt",
+          "overdue": false,
+          "description": "Facilitate student sessions and record observations and survey answers.",
+          "status": "not_started",
+          "due_time": "23:59",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-05T23:59:00-05:00",
+          "can_split": true,
+          "dependencies": [
+            "CEN-08"
+          ],
+          "first_step": "Check technical readiness, then prepare one anonymous session-summary template.",
+          "demo_offset_days": 4,
+          "fixed_due_date": "2026-12-05",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "ALG-10",
+          "course": "COT 3400 \u2014 Algorithms and Data Structures",
+          "task": "Dynamic programming worksheet",
+          "due_date": "2026-12-06",
+          "estimated_hours": 1.5,
+          "estimated_minutes": 90,
+          "source_file": "algorithms.txt",
+          "overdue": false,
+          "description": "Define subproblems, recurrences, and base cases for two examples.",
+          "status": "not_started",
+          "due_time": "23:59",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-06T23:59:00-05:00",
+          "can_split": true,
+          "dependencies": [
+            "ALG-09"
+          ],
+          "first_step": "Read the first problem and write down what each table entry means.",
+          "demo_offset_days": 5,
+          "fixed_due_date": "2026-12-06",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "CEN-10",
+          "course": "CEN 4930 \u2014 AI Agent Workflows",
+          "task": "M4 evaluation and user testing report",
+          "due_date": "2026-12-06",
+          "estimated_hours": 4.0,
+          "estimated_minutes": 120,
+          "source_file": "software_engineering.txt",
+          "overdue": false,
+          "description": "Synthesize the actual evaluation, user evidence, decision, and updated canvas.",
+          "status": "in_progress",
+          "due_time": "23:59",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-06T23:59:00-05:00",
+          "can_split": true,
+          "dependencies": [
+            "CEN-09"
+          ],
+          "first_step": "Collect the completed results and session notes before writing conclusions.",
+          "demo_offset_days": 5,
+          "fixed_due_date": "2026-12-06",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "CEN-11",
+          "course": "CEN 4930 \u2014 AI Agent Workflows",
+          "task": "Final presentation preparation",
+          "due_date": "2026-12-07",
+          "estimated_hours": 2.0,
+          "estimated_minutes": 90,
+          "source_file": "software_engineering.txt",
+          "overdue": false,
+          "description": "Prepare a concise pitch and a demo that honestly shows limitations.",
+          "status": "in_progress",
+          "due_time": "12:00",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-07T12:00:00-05:00",
+          "can_split": true,
+          "dependencies": [
+            "CEN-10"
+          ],
+          "first_step": "Draft the slide explaining the strongest observed user outcome.",
+          "demo_offset_days": 6,
+          "fixed_due_date": "2026-12-07",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "CEN-12",
+          "course": "CEN 4930 \u2014 AI Agent Workflows",
+          "task": "Final project presentation",
+          "due_date": "2026-12-07",
+          "estimated_hours": 0.5,
+          "estimated_minutes": 30,
+          "source_file": "software_engineering.txt",
+          "overdue": false,
+          "description": "Complete one uninterrupted team rehearsal with questions and a demo.",
+          "status": "not_started",
+          "due_time": "16:00",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-07T16:00:00-05:00",
+          "can_split": false,
+          "dependencies": [
+            "CEN-11"
+          ],
+          "first_step": "Confirm all three team members can attend the rehearsal.",
+          "demo_offset_days": 6,
+          "fixed_due_date": "2026-12-07",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "ALG-11",
+          "course": "COT 3400 \u2014 Algorithms and Data Structures",
+          "task": "Final exam preparation",
+          "due_date": "2026-12-07",
+          "estimated_hours": 3.0,
+          "estimated_minutes": 150,
+          "source_file": "algorithms.txt",
+          "overdue": false,
+          "description": "Practice representative graph, tree, and dynamic programming questions.",
+          "status": "in_progress",
+          "due_time": "23:59",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-07T23:59:00-05:00",
+          "can_split": true,
+          "dependencies": [],
+          "first_step": "Pick one weak topic and attempt a short practice question without notes.",
+          "demo_offset_days": 6,
+          "fixed_due_date": "2026-12-07",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "CEN-13",
+          "course": "CEN 4930 \u2014 AI Agent Workflows",
+          "task": "Prepare TaskPilot poster",
+          "due_date": "2026-12-07",
+          "estimated_hours": 0.75,
+          "estimated_minutes": 45,
+          "source_file": "software_engineering.txt",
+          "overdue": false,
+          "description": "Create a one-page poster explaining the problem, workflow, and evidence.",
+          "status": "not_started",
+          "due_time": "23:59",
+          "timezone": "America/New_York",
+          "due_at": "2026-12-07T23:59:00-05:00",
+          "can_split": false,
+          "dependencies": [],
+          "first_step": "Sketch the title, problem statement, and workflow diagram.",
+          "demo_offset_days": 6,
+          "fixed_due_date": "2026-12-07",
+          "date_mode": "fixed"
+        }
+      ],
+      "warnings": [],
+      "total_estimated_minutes": 990,
+      "source_notes": [
+        "algorithms.txt: Fictional planning fixture",
+        "algorithms.txt: All fixed due dates are December 1\u20137, 2026, as requested. These are not verified course deadlines.",
+        "algorithms.txt: Progress, estimates, and dependencies below are demonstration data, not student submission records.",
+        "algorithms.txt: With relative-date mode enabled, Demo offset days is measured from the explicit as-of date; fixed dates are preserved in metadata.",
+        "software_engineering.txt: Fictional planning fixture",
+        "software_engineering.txt: All fixed due dates are December 1\u20137, 2026, as requested. These are not verified course deadlines.",
+        "software_engineering.txt: Progress, estimates, and dependencies below are demonstration data, not student submission records.",
+        "software_engineering.txt: With relative-date mode enabled, Demo offset days is measured from the explicit as-of date; fixed dates are preserved in metadata."
+      ],
+      "date_mode": "fixed",
+      "assumption": "Completion and remaining effort come from the source records, not a submission system. Exact due times are used when provided; date-only records have an unknown cutoff. Relative dates are an explicit demo mode, never an automatic change to real deadlines."
+    },
+    "date_mode": "fixed",
+    "answer": "You have 16 hours 30 minutes total work, with 14 hours 5 minutes still pending. The first block begins today at 10:30\u202fAM (America/New_York) for Trees and heaps quiz preparation \u2013 spend ten minutes comparing a binary search tree with a binary heap. After that block you have another opening later tonight, which is a shorter window but together the two give about 2 hours 45 minutes of study time, roughly 2 hours 25 minutes of focused work. That leaves 15 minutes unused.",
+    "acceptance_text": "Got it \u2013 we\u2019ll kick off at 10:30\u202fAM with the tree\u2011vs\u2011heap comparison.",
+    "follow_up": "Does this start time work for you?",
+    "suggestions": [
+      "Use another opening today (8:15 PM)"
+    ],
+    "plan": {
+      "as_of": "2026-11-17",
+      "available_minutes": 180,
+      "scheduled_minutes": 145,
+      "unused_minutes": 15,
+      "blocks": [
+        {
+          "task_id": "ALG-06",
+          "task": "Trees and heaps quiz preparation",
+          "course": "COT 3400 \u2014 Algorithms and Data Structures",
+          "due_date": "2026-12-03",
+          "overdue": false,
+          "start_minute": 0,
+          "minutes": 45,
+          "start": "2026-11-17T10:30:00-05:00",
+          "end": "2026-11-17T11:15:00-05:00",
+          "due_at": "2026-12-03T18:00:00-05:00",
+          "timezone": "America/New_York",
+          "first_step": "Spend ten minutes comparing a binary search tree with a binary heap."
+        },
+        {
+          "task_id": "ALG-08",
+          "task": "Graph traversal practice problems",
+          "course": "COT 3400 \u2014 Algorithms and Data Structures",
+          "due_date": "2026-12-04",
+          "overdue": false,
+          "start_minute": 55,
+          "minutes": 20,
+          "start": "2026-11-17T11:25:00-05:00",
+          "end": "2026-11-17T11:45:00-05:00",
+          "due_at": "2026-12-04T23:59:00-05:00",
+          "timezone": "America/New_York",
+          "first_step": "Choose one unfinished graph and trace the BFS queue by hand."
+        },
+        {
+          "task_id": "ALG-08",
+          "task": "Graph traversal practice problems",
+          "course": "COT 3400 \u2014 Algorithms and Data Structures",
+          "due_date": "2026-12-04",
+          "overdue": false,
+          "start_minute": 75,
+          "minutes": 40,
+          "start": "2026-11-17T17:15:00-05:00",
+          "end": "2026-11-17T17:55:00-05:00",
+          "due_at": "2026-12-04T23:59:00-05:00",
+          "timezone": "America/New_York",
+          "first_step": "Choose one unfinished graph and trace the BFS queue by hand."
+        },
+        {
+          "task_id": "ALG-07",
+          "task": "Heap implementation assignment",
+          "course": "COT 3400 \u2014 Algorithms and Data Structures",
+          "due_date": "2026-12-04",
+          "overdue": false,
+          "start_minute": 125,
+          "minutes": 40,
+          "start": "2026-11-17T18:05:00-05:00",
+          "end": "2026-11-17T18:45:00-05:00",
+          "due_at": "2026-12-04T23:59:00-05:00",
+          "timezone": "America/New_York",
+          "first_step": "Run the current tests and identify the first failing heap operation."
+        }
+      ],
+      "unfinished": [
+        {
+          "task_id": "ALG-07",
+          "task": "Heap implementation assignment",
+          "remaining_minutes": 50
+        },
+        {
+          "task_id": "CEN-08",
+          "task": "Run agent evaluation suite",
+          "remaining_minutes": 90
+        },
+        {
+          "task_id": "ALG-09",
+          "task": "Shortest path algorithms assignment",
+          "remaining_minutes": 120
+        },
+        {
+          "task_id": "CEN-09",
+          "task": "User testing sessions and notes",
+          "remaining_minutes": 60
+        },
+        {
+          "task_id": "ALG-10",
+          "task": "Dynamic programming worksheet",
+          "remaining_minutes": 90
+        },
+        {
+          "task_id": "CEN-10",
+          "task": "M4 evaluation and user testing report",
+          "remaining_minutes": 120
+        },
+        {
+          "task_id": "CEN-11",
+          "task": "Final presentation preparation",
+          "remaining_minutes": 90
+        },
+        {
+          "task_id": "CEN-12",
+          "task": "Final project presentation",
+          "remaining_minutes": 30
+        },
+        {
+          "task_id": "ALG-11",
+          "task": "Final exam preparation",
+          "remaining_minutes": 150
+        },
+        {
+          "task_id": "CEN-13",
+          "task": "Prepare TaskPilot poster",
+          "remaining_minutes": 45
+        }
+      ],
+      "warnings": [],
+      "assumption": "Completion and remaining effort come from the source records, not a submission system. Exact due times are used when provided; date-only records have an unknown cutoff. Relative dates are an explicit demo mode, never an automatic change to real deadlines.",
+      "blocked": [
+        {
+          "task_id": "CEN-09",
+          "task": "User testing sessions and notes",
+          "dependencies": [
+            "CEN-08"
+          ]
+        },
+        {
+          "task_id": "ALG-09",
+          "task": "Shortest path algorithms assignment",
+          "dependencies": [
+            "ALG-08"
+          ]
+        },
+        {
+          "task_id": "ALG-10",
+          "task": "Dynamic programming worksheet",
+          "dependencies": [
+            "ALG-09"
+          ]
+        },
+        {
+          "task_id": "CEN-10",
+          "task": "M4 evaluation and user testing report",
+          "dependencies": [
+            "CEN-09"
+          ]
+        },
+        {
+          "task_id": "CEN-11",
+          "task": "Final presentation preparation",
+          "dependencies": [
+            "CEN-10"
+          ]
+        },
+        {
+          "task_id": "CEN-12",
+          "task": "Final project presentation",
+          "dependencies": [
+            "CEN-11"
+          ]
+        }
+      ],
+      "elapsed_minutes": 165,
+      "break_minutes": 20,
+      "session_limit_start": "2026-11-17T10:30:00-05:00",
+      "session_limit_end": "2026-11-17T11:45:00-05:00",
+      "shorter_window": true,
+      "split_confirmed": true,
+      "calendar_span_minutes": 495
+    },
+    "text": "Here\u2019s a possible way to use your 3 hours (2026-11-17).\n  0\u201345 min: Trees and heaps quiz preparation (COT 3400 \u2014 Algorithms and Data Structures)\n    Listed deadline: 2026-12-03T18:00:00-05:00.\n    A first step: Spend ten minutes comparing a binary search tree with a binary heap.\n  55\u201375 min: Graph traversal practice problems (COT 3400 \u2014 Algorithms and Data Structures)\n    Listed deadline: 2026-12-04T23:59:00-05:00.\n    A first step: Choose one unfinished graph and trace the BFS queue by hand.\n  75\u2013115 min: Graph traversal practice problems (COT 3400 \u2014 Algorithms and Data Structures)\n    Listed deadline: 2026-12-04T23:59:00-05:00.\n    A first step: Choose one unfinished graph and trace the BFS queue by hand.\n  125\u2013165 min: Heap implementation assignment (COT 3400 \u2014 Algorithms and Data Structures)\n    Listed deadline: 2026-12-04T23:59:00-05:00.\n    This is a start; about 50 minutes would still be needed afterward.\n    A first step: Run the current tests and identify the first failing heap operation.\nOther assignments are still on your list. We can take them one session at a time.\nYou have 15 minutes left unallocated.\nSome work depends on unfinished prerequisites; check the full details before starting it.\nTiming note: confirm source deadlines; date-only records do not specify a cutoff time.\n\nCalendar blocks:\n2026-11-17T10:30:00-05:00 to 2026-11-17T11:15:00-05:00: Trees and heaps quiz preparation\n2026-11-17T11:25:00-05:00 to 2026-11-17T11:45:00-05:00: Graph traversal practice problems\n2026-11-17T17:15:00-05:00 to 2026-11-17T17:55:00-05:00: Graph traversal practice problems\n2026-11-17T18:05:00-05:00 to 2026-11-17T18:45:00-05:00: Heap implementation assignment",
+    "calendar": {
+      "mode": "demo",
+      "synced_at": "2026-11-17T09:30:00-05:00",
+      "timezone": "America/New_York",
+      "simulated_now": "2026-11-17T09:30:00-05:00",
+      "windows": [
+        {
+          "start": "2026-11-17T10:30:00-05:00",
+          "end": "2026-11-17T11:45:00-05:00"
+        },
+        {
+          "start": "2026-11-17T17:15:00-05:00",
+          "end": "2026-11-17T18:45:00-05:00"
+        },
+        {
+          "start": "2026-11-17T20:15:00-05:00",
+          "end": "2026-11-17T22:00:00-05:00"
+        }
+      ],
+      "explanation": "You\u2019re currently busy with Morning class. I leave 15 minutes around events and keep study time between 08:00 and 22:00."
+    },
+    "kind": "plan",
+    "minutes": 180,
+    "context": {
+      "action": "plan",
+      "minutes": 180,
+      "after_last_event": false,
+      "not_before": null,
+      "day": "2026-11-17",
+      "task_ids": [],
+      "restrict_tasks": false,
+      "summary": "Open another 3\u2011hour work slot today after current plan",
+      "request_kind": "plan",
+      "clarification_reason": "",
+      "max_windows": 2,
+      "awaiting": null,
+      "_grounded": true,
+      "confirmation": {
+        "text": "Got it \u2013 we\u2019ll kick off at 10:30\u202fAM with the tree\u2011vs\u2011heap comparison.",
+        "expires": 1794939241.2938461,
+        "binding": "d764dd9b588208ea5663c19d53ee1b53a426db7e43ca626c9935b39331e750f7",
+        "model": "gpt-oss",
+        "signature": "0bbffff6c596fc19849973cc43d4ea555491d7c2a18113379bd77479a83ec0c4"
+      }
+    },
+    "answer_facts": {
+      "total_work_minutes": 990,
+      "total_work": "16 hours 30 minutes",
+      "focus_minutes": 145,
+      "remaining_work_minutes": 845,
+      "remaining_work": "14 hours 5 minutes",
+      "inventory": [
+        {
+          "task": "Trees and heaps quiz preparation",
+          "course": "COT 3400 \u2014 Algorithms and Data Structures",
+          "due": "2026-12-03T18:00:00-05:00",
+          "estimated_minutes": 45
+        },
+        {
+          "task": "Graph traversal practice problems",
+          "course": "COT 3400 \u2014 Algorithms and Data Structures",
+          "due": "2026-12-04T23:59:00-05:00",
+          "estimated_minutes": 60
+        },
+        {
+          "task": "Heap implementation assignment",
+          "course": "COT 3400 \u2014 Algorithms and Data Structures",
+          "due": "2026-12-04T23:59:00-05:00",
+          "estimated_minutes": 90
+        },
+        {
+          "task": "Run agent evaluation suite",
+          "course": "CEN 4930 \u2014 AI Agent Workflows",
+          "due": "2026-12-04T23:59:00-05:00",
+          "estimated_minutes": 90
+        },
+        {
+          "task": "Shortest path algorithms assignment",
+          "course": "COT 3400 \u2014 Algorithms and Data Structures",
+          "due": "2026-12-05T23:59:00-05:00",
+          "estimated_minutes": 120
+        },
+        {
+          "task": "User testing sessions and notes",
+          "course": "CEN 4930 \u2014 AI Agent Workflows",
+          "due": "2026-12-05T23:59:00-05:00",
+          "estimated_minutes": 60
+        },
+        {
+          "task": "Dynamic programming worksheet",
+          "course": "COT 3400 \u2014 Algorithms and Data Structures",
+          "due": "2026-12-06T23:59:00-05:00",
+          "estimated_minutes": 90
+        },
+        {
+          "task": "M4 evaluation and user testing report",
+          "course": "CEN 4930 \u2014 AI Agent Workflows",
+          "due": "2026-12-06T23:59:00-05:00",
+          "estimated_minutes": 120
+        },
+        {
+          "task": "Final presentation preparation",
+          "course": "CEN 4930 \u2014 AI Agent Workflows",
+          "due": "2026-12-07T12:00:00-05:00",
+          "estimated_minutes": 90
+        },
+        {
+          "task": "Final project presentation",
+          "course": "CEN 4930 \u2014 AI Agent Workflows",
+          "due": "2026-12-07T16:00:00-05:00",
+          "estimated_minutes": 30
+        },
+        {
+          "task": "Final exam preparation",
+          "course": "COT 3400 \u2014 Algorithms and Data Structures",
+          "due": "2026-12-07T23:59:00-05:00",
+          "estimated_minutes": 150
+        },
+        {
+          "task": "Prepare TaskPilot poster",
+          "course": "CEN 4930 \u2014 AI Agent Workflows",
+          "due": "2026-12-07T23:59:00-05:00",
+          "estimated_minutes": 45
+        }
+      ],
+      "required_answer_phrases": [
+        "16 hours 30 minutes",
+        "14 hours 5 minutes",
+        "2 hours 25 minutes",
+        "2 hours 45 minutes",
+        "shorter",
+        "15 minutes unused"
+      ],
+      "task_progress": [
+        {
+          "task": "Trees and heaps quiz preparation",
+          "before_minutes": 45,
+          "proposed_focus_minutes": 45,
+          "after_minutes": 0,
+          "after": "0 minutes"
+        },
+        {
+          "task": "Graph traversal practice problems",
+          "before_minutes": 60,
+          "proposed_focus_minutes": 60,
+          "after_minutes": 0,
+          "after": "0 minutes"
+        },
+        {
+          "task": "Heap implementation assignment",
+          "before_minutes": 90,
+          "proposed_focus_minutes": 40,
+          "after_minutes": 50,
+          "after": "50 minutes"
+        },
+        {
+          "task": "Run agent evaluation suite",
+          "before_minutes": 90,
+          "proposed_focus_minutes": 0,
+          "after_minutes": 90,
+          "after": "1 hour 30 minutes"
+        },
+        {
+          "task": "Shortest path algorithms assignment",
+          "before_minutes": 120,
+          "proposed_focus_minutes": 0,
+          "after_minutes": 120,
+          "after": "2 hours"
+        },
+        {
+          "task": "User testing sessions and notes",
+          "before_minutes": 60,
+          "proposed_focus_minutes": 0,
+          "after_minutes": 60,
+          "after": "1 hour"
+        },
+        {
+          "task": "Dynamic programming worksheet",
+          "before_minutes": 90,
+          "proposed_focus_minutes": 0,
+          "after_minutes": 90,
+          "after": "1 hour 30 minutes"
+        },
+        {
+          "task": "M4 evaluation and user testing report",
+          "before_minutes": 120,
+          "proposed_focus_minutes": 0,
+          "after_minutes": 120,
+          "after": "2 hours"
+        },
+        {
+          "task": "Final presentation preparation",
+          "before_minutes": 90,
+          "proposed_focus_minutes": 0,
+          "after_minutes": 90,
+          "after": "1 hour 30 minutes"
+        },
+        {
+          "task": "Final project presentation",
+          "before_minutes": 30,
+          "proposed_focus_minutes": 0,
+          "after_minutes": 30,
+          "after": "30 minutes"
+        },
+        {
+          "task": "Final exam preparation",
+          "before_minutes": 150,
+          "proposed_focus_minutes": 0,
+          "after_minutes": 150,
+          "after": "2 hours 30 minutes"
+        },
+        {
+          "task": "Prepare TaskPilot poster",
+          "before_minutes": 45,
+          "proposed_focus_minutes": 0,
+          "after_minutes": 45,
+          "after": "45 minutes"
+        }
+      ],
+      "next_opening": {
+        "start": "2026-11-17T20:15:00-05:00",
+        "end": "2026-11-17T22:00:00-05:00"
+      },
+      "deadline_risks": [],
+      "can_finish_all": false,
+      "session_elapsed_minutes": 165,
+      "session_break_minutes": 20,
+      "requested_elapsed_minutes": 180
+    },
+    "engine": "two_agent_ai",
+    "model": "gpt-oss",
+    "reasoning_effort": "low",
+    "evidence": {
+      "analyst_tool_outputs": 1,
+      "intent_correction": false,
+      "handoff": true,
+      "advisor_returned": true,
+      "time_range_correction": false,
+      "answer_correction": true,
+      "critic_passed": true,
+      "critic_reviews": 3,
+      "validation_diagnostics": [
+        {
+          "answer": "You have 16 hours 30 minutes total work, with 14 hours 5 minutes still pending. The next opening today runs from 8:15\u202fPM to 10:00\u202fPM (America/New_York). It\u2019s a shorter window, giving you about 2 hours 45 minutes of study time, and you can devote roughly 2 hours 25 minutes to focused work, leaving 15 minutes unused. Start by finishing the remaining 40 minutes of the Heap implementation assignment, then move on to the Run agent evaluation suite \u2013 begin by running the next unexecuted case and saving its output.",
+          "issue": "Analyst review: The candidate states the next opening today runs from 8:15\u202fPM to 10:00\u202fPM, which matches the verified next_opening times, but then claims this is a \"shorter window\" giving about 2\u202fhours\u202f45\u202fminutes of study time \u2013 the window is only 1\u202fhour\u202f45\u202fminutes (105\u202fminutes).; It says you can devote roughly 2\u202fhours\u202f25\u202fminutes to focused work in that window. The verified data shows only 15\u202fminutes of unused time overall and 145\u202fminutes of focused work already allocated; no 2\u202fh\u202f25\u202fm focused period is available.; The claim of \"leaving 15 minutes unused\" is true for the overall session but incorrectly presented as the unused portion of the new 8:15\u202fPM\u201110:00\u202fPM window.; The candidate says to finish the remaining 40\u202fminutes of the Heap implementation assignment, but the verified unfinished list shows 50\u202fminutes remaining.; It suggests moving to the Run agent evaluation suite after the heap task, but no time for that task is allocated in the proposed window, and the candidate gives no schedule for it."
+        },
+        {
+          "answer": "You have 16 hours 30 minutes total work, with 14 hours 5 minutes still pending. The first block starts today at 10:30\u202fAM (America/New_York) for Trees and heaps quiz preparation. After that you have a later opening that\u2019s a shorter window but still gives about 2 hours 45 minutes of study time, letting you focus for roughly 2 hours 25 minutes. That leaves 15 minutes unused overall. You could finish the remaining 50 minutes of the Heap implementation assignment in the early block, then continue with the later opening if you want more progress.",
+          "issue": "Analyst review: The candidate says a later opening provides about 2 hours 45 minutes of study time and roughly 2 hours 25 minutes of focus, but the verified next opening is 2026-11-17T20:15:00-05:00 to 2026-11-17T22:00:00-05:00, which is only 1 hour 45 minutes total (and focus time would be less after breaks).; The candidate claims the remaining 50 minutes of the Heap implementation assignment could be finished in the early block, but the early block for that task is only 40 minutes long, leaving 10 minutes still unused in that block.; The statement that the later opening is a \"shorter window\" conflicts with the actual window lengths; the earlier windows total 2 hours 25 minutes of focus, while the later window is shorter, not longer."
+        }
+      ]
+    }
+  }
+}

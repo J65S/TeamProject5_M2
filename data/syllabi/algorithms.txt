@@ -1,0 +1,163 @@
+COURSE: COT 3400 — Algorithms and Data Structures
+TERM: Fall 2026 — December demonstration week
+DATA TYPE: Fictional planning fixture
+DATE NOTE: All fixed due dates are December 1–7, 2026, as requested. These are not verified course deadlines.
+STATUS NOTE: Progress, estimates, and dependencies below are demonstration data, not student submission records.
+DEMO NOTE: With relative-date mode enabled, Demo offset days is measured from the explicit as-of date; fixed dates are preserved in metadata.
+
+ASSIGNMENTS
+
+Task: Big-O analysis worksheet
+ID: ALG-01
+Description: Classify time and space complexity for short code examples.
+Due: 2026-12-01
+Due time: 23:59
+Timezone: America/New_York
+Estimated hours: 1
+Remaining minutes: 0
+Status: Completed
+Can split: Yes
+Dependencies: None
+First step: Review the completed complexity table.
+Demo offset days: 0
+
+Task: Recursion practice problems
+ID: ALG-02
+Description: Trace recursive calls and solve recurrence examples.
+Due: 2026-12-01
+Due time: 23:59
+Timezone: America/New_York
+Estimated hours: 1.5
+Remaining minutes: 0
+Status: Completed
+Can split: Yes
+Dependencies: None
+First step: Review the completed recursion traces.
+Demo offset days: 0
+
+Task: Sorting algorithms quiz preparation
+ID: ALG-03
+Description: Compare sorting algorithms and practice complexity questions.
+Due: 2026-12-02
+Due time: 23:59
+Timezone: America/New_York
+Estimated hours: 1
+Remaining minutes: 0
+Status: Completed
+Can split: Yes
+Dependencies: None
+First step: Review the existing sorting comparison sheet.
+Demo offset days: 1
+
+Task: Exam 1 preparation
+ID: ALG-04
+Description: Review algorithm analysis, recursion, and sorting topics.
+Due: 2026-12-02
+Due time: 23:59
+Timezone: America/New_York
+Estimated hours: 2
+Remaining minutes: 0
+Status: Completed
+Can split: Yes
+Dependencies: None
+First step: Check the saved review notes.
+Demo offset days: 1
+
+Task: Binary tree traversal worksheet
+ID: ALG-05
+Description: Write preorder, inorder, and postorder traversals for sample trees.
+Due: 2026-12-03
+Due time: 23:59
+Timezone: America/New_York
+Estimated hours: 1
+Remaining minutes: 0
+Status: Completed
+Can split: Yes
+Dependencies: None
+First step: Review the completed traversal examples.
+Demo offset days: 2
+
+Task: Trees and heaps quiz preparation
+ID: ALG-06
+Description: Review tree properties and heap operations using practice questions.
+Due: 2026-12-03
+Due time: 18:00
+Timezone: America/New_York
+Estimated hours: 0.75
+Remaining minutes: 45
+Status: Not started
+Can split: Yes
+Dependencies: None
+First step: Spend ten minutes comparing a binary search tree with a binary heap.
+Demo offset days: 2
+
+Task: Heap implementation assignment
+ID: ALG-07
+Description: Finish insert and remove operations and test heap invariants.
+Due: 2026-12-04
+Due time: 23:59
+Timezone: America/New_York
+Estimated hours: 3
+Remaining minutes: 90
+Status: In progress
+Can split: Yes
+Dependencies: None
+First step: Run the current tests and identify the first failing heap operation.
+Demo offset days: 3
+
+Task: Graph traversal practice problems
+ID: ALG-08
+Description: Finish breadth-first and depth-first traversal exercises.
+Due: 2026-12-04
+Due time: 23:59
+Timezone: America/New_York
+Estimated hours: 2
+Remaining minutes: 60
+Status: In progress
+Can split: Yes
+Dependencies: None
+First step: Choose one unfinished graph and trace the BFS queue by hand.
+Demo offset days: 3
+
+Task: Shortest path algorithms assignment
+ID: ALG-09
+Description: Implement Dijkstra’s algorithm and explain its complexity.
+Due: 2026-12-05
+Due time: 23:59
+Timezone: America/New_York
+Estimated hours: 2
+Remaining minutes: 120
+Status: Not started
+Can split: Yes
+Dependencies: ALG-08
+First step: Read the requirements and identify the graph representation.
+Demo offset days: 4
+
+Task: Dynamic programming worksheet
+ID: ALG-10
+Description: Define subproblems, recurrences, and base cases for two examples.
+Due: 2026-12-06
+Due time: 23:59
+Timezone: America/New_York
+Estimated hours: 1.5
+Remaining minutes: 90
+Status: Not started
+Can split: Yes
+Dependencies: ALG-09
+First step: Read the first problem and write down what each table entry means.
+Demo offset days: 5
+
+Task: Final exam preparation
+ID: ALG-11
+Description: Practice representative graph, tree, and dynamic programming questions.
+Due: 2026-12-07
+Due time: 23:59
+Timezone: America/New_York
+Estimated hours: 3
+Remaining minutes: 150
+Status: In progress
+Can split: Yes
+Dependencies: None
+First step: Pick one weak topic and attempt a short practice question without notes.
+Demo offset days: 6
+
