@@ -1,0 +1,9 @@
+COURSE: Conflict Test
+
+Task: Three-hour assignment
+Due: 2026-10-28
+Estimated hours: 3
+
+Task: Eight-hour assignment
+Due: 2026-10-28
+Estimated hours: 8

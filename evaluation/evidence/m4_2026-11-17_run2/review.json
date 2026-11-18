@@ -1,0 +1,75 @@
+{
+  "policy": "Manual review against M3 Section 4.3 and the first run's full-response policy. Evaluate the final delivered reply as well as checked allocations. Narrow handoff/retrieval criteria are distinct from secondary prose issues. No invented critic score; no application changes or selective reruns during this run.",
+  "cases": {
+    "TC01": {
+      "pass_fail": "FAIL",
+      "summary": "The checked schedule is 65 focus + 10 break = 75 elapsed minutes today, within 240. The AI incorrectly calls the 10:30–11:20 block a 65-minute focused slot and then adds the separate 15-minute block, contradicting its displayed allocation and remaining-work accounting.",
+      "root_cause": "AI narration disagrees with checked scheduling data",
+      "failure_analysis": "The table and Python remaining estimate (61h 55m) are correct, but the AI's description counts the first 50-minute block as 65 and then counts the second 15 minutes again. The combined answer is not an internally consistent allocation/remaining-work explanation. No invented timing constraint or next-day allocation remains in the checked plan.",
+      "secondary_notes": "Another evening window is offered conditionally, not saved or included in the checked schedule."
+    },
+    "TC02": {
+      "pass_fail": "PASS",
+      "summary": "Schedules 50 minutes from 10:30 to 11:20, leaves 10 minutes unallocated and explicitly reports 62h 10m still unfinished. The allocation stays inside the available hour.",
+      "root_cause": "None for the defined limited-availability criterion",
+      "failure_analysis": "The 63-hour source workload minus 50 proposed focus minutes equals 62h 10m. Optional extra-session suggestions are framed as questions and not included in this hour's allocation.",
+      "secondary_notes": "The agent describes algorithms.txt as notes, although it is a syllabus source. No source evidence establishes the suggested lecture-note content."
+    },
+    "TC03": {
+      "pass_fail": "FAIL",
+      "summary": "The checked schedule correctly has zero blocks, but the AI's first concrete step assigns a 15–20-minute topic-review/material-gathering block despite zero availability.",
+      "root_cause": "AI zero-availability handling contradicts the no-work state",
+      "failure_analysis": "M3 explicitly requires no study OR preparation work today. The reply acknowledges no free time, then tells the user to spend 15–20 minutes preparing so they can study when a free slot appears. The preparation instruction is not explicitly deferred to an agreed future day. This is a regression from the first run, where the reply only asked about future availability.",
+      "secondary_notes": "The prose also says all three assignments are unfinished; the snapshot actually contains thirteen active assignments. The displayed zero allocation and 63-hour remaining total are correct."
+    },
+    "TC04": {
+      "pass_fail": "PASS",
+      "summary": "Asks for available hours/minutes; minutes remains null and no concrete schedule is produced.",
+      "root_cause": "None for the defined missing-information criterion",
+      "failure_analysis": "The request reaches the advisor and returns a focused availability clarification instead of an intent-validation error or guessed duration.",
+      "secondary_notes": "The availability question is repeated in follow_up. This is conversational friction, not a failure of the original criterion."
+    },
+    "TC05": {
+      "pass_fail": "PASS",
+      "summary": "Keeps both same-deadline tasks in analysis, computes 11 total hours, prioritizes the shorter task, schedules 65 focus minutes in a 75-minute window, reports 9h 55m remaining and visibly flags both tasks at risk.",
+      "root_cause": "None for the defined conflicting-deadline criterion",
+      "failure_analysis": "answer_facts.total_work_minutes is 660 and remaining_work_minutes is 595. The checked blocks total 65 minutes before the shared date, so 660−65=595. The optimistic calendar capacity before the deadline is only 630 minutes even before breaks; the visible deadline-risk warning is therefore justified. No eight-hour task is silently dropped and no block is late.",
+      "secondary_notes": "The 11-hour total is explicit in the returned analysis facts, not separately stated in the natural-language paragraph. The paragraph loosely treats proposed progress as already made and its evening continuation is optimistic; these are secondary prose weaknesses. The pass applies to the specified shared-deadline/workload/priority/risk criteria."
+    },
+    "TC06": {
+      "pass_fail": "PASS",
+      "summary": "Records a real MCP tool result, a handoff containing request/analysis context, and one returned advisor response.",
+      "root_cause": "None for the defined handoff criterion",
+      "failure_analysis": "analyst_tool_outputs=1, handoff=true and advisor_returned=true. The snapshot, interpreted intent and current source hashes support the recorded handoff. This is a sequential Python-coordinated handoff, matching the existing architecture, not an SDK-native handoff trace.",
+      "secondary_notes": "The prose later calls a 17:15–18:45 opening a 5–6 PM opening and proposes a different short break. The checked schedule remains feasible. These errors do not change the narrow handoff result."
+    },
+    "TC07": {
+      "pass_fail": "PASS",
+      "summary": "Retrieves and surfaces the added poster in the complete 14-item inventory. The source snapshot retains its correct task, course, November 15 date, 2-hour estimate and software_engineering.txt source.",
+      "root_cause": "None for the defined retrieval criterion",
+      "failure_analysis": "The retrieved poster record has course CEN 4930 — AI Agent Workflows, due_date 2026-11-15, estimated_hours=2.0, estimated_minutes=120 and source_file=software_engineering.txt. Structured analysis inventory retains title/course/date/120 minutes; the final answer includes the poster with its correct course/date. This is a retrieval/analysis-coverage pass, not a claim that every field is printed in prose.",
+      "secondary_notes": "The final inventory omits estimates and source filenames for all entries; they remain in structured results. No new study plan is forced onto the inventory question."
+    },
+    "TC08": {
+      "pass_fail": "FAIL",
+      "summary": "The real follow-up retains context, changes 240 to 120 minutes and displays a correct 75-minute plan with 61h 55m unfinished. Its prose also instructs 15 minutes of immediate preparation plus a short break, proposes an extra 35-minute evening block, and falsely claims there is only one remaining free window.",
+      "root_cause": "AI continuation advice diverges from the revised schedule and calendar",
+      "failure_analysis": "The 75-minute table itself passes. Following the narrative's immediate 15-minute preparation and 35-minute extra block as well as that table uses at least 125 minutes before the additional short break or optional recap. The evening addition is posed for approval, but the unbudgeted 'first concrete action right now' is not; at the simulated 09:30 it also conflicts with Morning class. The full clock span with that immediate work is 09:30–11:45 (135 minutes). The claimed only free window also omits 20:15–22:00. A clean JSON budget update alone cannot make the inconsistent full reply pass.",
+      "secondary_notes": "The initial four-hour turn succeeded and its output/history were used in the follow-up. It too proposed an immediate warm-up outside its checked blocks. No false after-work constraint persists in the structured context."
+    },
+    "TC09": {
+      "pass_fail": "PASS",
+      "summary": "Schedules 50 minutes within the available hour and reports a correctly computed 62h 10m of work remaining, plus a deadline-capacity shortage warning.",
+      "root_cause": "None for the defined shortage/calculation criterion",
+      "failure_analysis": "The source workload is 3,780 minutes (63h); 50 proposed focus minutes leave 3,730 minutes (62h 10m). The checked section displays this remainder and flags insufficient known calendar capacity. A literal 'No' is not required by the original criterion; the quantified unfinished workload demonstrates that all assignments cannot be completed in this session.",
+      "secondary_notes": "The AI paragraph does not directly answer yes/no and asks which quiz topic to focus on. It also mentions optional later work. The pass reflects the actual shortage, limit and arithmetic criteria, not complete conversational quality."
+    },
+    "TC10": {
+      "pass_fail": "PASS",
+      "summary": "Reports the missing syllabus folder with expected exit code 2, without an AI call, invented assignments or unhandled traceback.",
+      "root_cause": "None for the defined missing-data criterion",
+      "failure_analysis": "The controlled nonexistent folder exercises the same file-loading guard without renaming or deleting user data. This is a local error-handling pass, not a successful AI inference.",
+      "secondary_notes": "No provider request is made for missing input data."
+    }
+  }
+}

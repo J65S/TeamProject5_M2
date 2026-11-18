@@ -1,0 +1,253 @@
+{
+  "as_of": "2026-10-27",
+  "assignment_snapshot": {
+    "today": "2026-10-27",
+    "assignments": [
+      {
+        "id": "d1c6672a1933",
+        "course": "Conflict Test",
+        "task": "Eight-hour assignment",
+        "due_date": "2026-10-28",
+        "estimated_hours": 8.0,
+        "estimated_minutes": 480,
+        "source_file": "tasks.txt",
+        "overdue": false,
+        "description": "",
+        "status": "not_started",
+        "due_time": null,
+        "timezone": null,
+        "due_at": null,
+        "can_split": true,
+        "dependencies": [],
+        "first_step": "",
+        "demo_offset_days": null,
+        "fixed_due_date": "2026-10-28",
+        "date_mode": "fixed"
+      },
+      {
+        "id": "42ceeb429747",
+        "course": "Conflict Test",
+        "task": "Three-hour assignment",
+        "due_date": "2026-10-28",
+        "estimated_hours": 3.0,
+        "estimated_minutes": 180,
+        "source_file": "tasks.txt",
+        "overdue": false,
+        "description": "",
+        "status": "not_started",
+        "due_time": null,
+        "timezone": null,
+        "due_at": null,
+        "can_split": true,
+        "dependencies": [],
+        "first_step": "",
+        "demo_offset_days": null,
+        "fixed_due_date": "2026-10-28",
+        "date_mode": "fixed"
+      }
+    ],
+    "warnings": [],
+    "total_estimated_minutes": 660,
+    "source_notes": [],
+    "date_mode": "fixed",
+    "assumption": "Completion and remaining effort come from the source records, not a submission system. Exact due times are used when provided; date-only records have an unknown cutoff. Relative dates are an explicit demo mode, never an automatic change to real deadlines."
+  },
+  "date_mode": "fixed",
+  "answer": "Right now the plan has you working on the **Three\u2011hour assignment** for two short blocks today: 10:30\u201111:20 (50\u202fmin focus) and 11:30\u201111:45 (15\u202fmin focus). That\u2019s 65\u202fminutes of focused work plus a 10\u2011minute break, so 75\u202fminutes of study time. You still have about 105\u202fminutes of the three\u2011hour window you said you have today.\n\nThe next free slot the calendar shows is **17:15\u201118:45** (90\u202fminutes). Using that slot to keep chipping away at the Three\u2011hour assignment would bring you to about 155\u202fminutes of focused work total, leaving only about 25\u202fminutes left for tomorrow \u2013 a manageable amount to finish before the due date.\n\n**Recommended next step:** Open the Three\u2011hour assignment, locate the section you didn\u2019t finish in the morning block, and spend the first 20\u201125\u202fminutes outlining the main points you\u2019ll cover. That short sprint will give you concrete progress and make the later afternoon session flow more easily.\n\n**Low\u2011pressure question:** Does the 17:15\u201118:45 window still work for you to continue this assignment?\n\nStudy schedule (America/New_York):\n  Tue, Oct 27 2026 \u00b7 10:30 AM\u201311:20 AM | Three-hour assignment (50 minutes); due 2026-10-28\n  11:20 AM\u201311:30 AM | Break (10 minutes)\n  Tue, Oct 27 2026 \u00b7 11:30 AM\u201311:45 AM | Three-hour assignment (15 minutes); due 2026-10-28\nStudy time: 1 hour 15 minutes including breaks, of 3 hours available. Unallocated: 1 hour 45 minutes.\nEstimated work remaining after this proposed session: 9 hours 55 minutes.\nDeadline risk: Eight-hour assignment, Three-hour assignment \u2014 the known free time cannot cover the estimated work before the listed deadline. Confirm date-only cutoff times.",
+  "ai_guidance": "Right now the plan has you working on the **Three\u2011hour assignment** for two short blocks today: 10:30\u201111:20 (50\u202fmin focus) and 11:30\u201111:45 (15\u202fmin focus). That\u2019s 65\u202fminutes of focused work plus a 10\u2011minute break, so 75\u202fminutes of study time. You still have about 105\u202fminutes of the three\u2011hour window you said you have today.\n\nThe next free slot the calendar shows is **17:15\u201118:45** (90\u202fminutes). Using that slot to keep chipping away at the Three\u2011hour assignment would bring you to about 155\u202fminutes of focused work total, leaving only about 25\u202fminutes left for tomorrow \u2013 a manageable amount to finish before the due date.\n\n**Recommended next step:** Open the Three\u2011hour assignment, locate the section you didn\u2019t finish in the morning block, and spend the first 20\u201125\u202fminutes outlining the main points you\u2019ll cover. That short sprint will give you concrete progress and make the later afternoon session flow more easily.\n\n**Low\u2011pressure question:** Does the 17:15\u201118:45 window still work for you to continue this assignment?\n",
+  "follow_up": "",
+  "suggestions": [
+    "Use another opening today (5:15 PM)"
+  ],
+  "acceptance_text": "",
+  "plan": {
+    "as_of": "2026-10-27",
+    "available_minutes": 180,
+    "scheduled_minutes": 65,
+    "unused_minutes": 105,
+    "blocks": [
+      {
+        "task_id": "42ceeb429747",
+        "task": "Three-hour assignment",
+        "course": "Conflict Test",
+        "due_date": "2026-10-28",
+        "overdue": false,
+        "start_minute": 0,
+        "minutes": 50,
+        "start": "2026-10-27T10:30:00-04:00",
+        "end": "2026-10-27T11:20:00-04:00",
+        "due_at": null,
+        "timezone": null,
+        "first_step": ""
+      },
+      {
+        "task_id": "42ceeb429747",
+        "task": "Three-hour assignment",
+        "course": "Conflict Test",
+        "due_date": "2026-10-28",
+        "overdue": false,
+        "start_minute": 60,
+        "minutes": 15,
+        "start": "2026-10-27T11:30:00-04:00",
+        "end": "2026-10-27T11:45:00-04:00",
+        "due_at": null,
+        "timezone": null,
+        "first_step": ""
+      }
+    ],
+    "unfinished": [
+      {
+        "task_id": "d1c6672a1933",
+        "task": "Eight-hour assignment",
+        "remaining_minutes": 480
+      },
+      {
+        "task_id": "42ceeb429747",
+        "task": "Three-hour assignment",
+        "remaining_minutes": 115
+      }
+    ],
+    "warnings": [],
+    "assumption": "Completion and remaining effort come from the source records, not a submission system. Exact due times are used when provided; date-only records have an unknown cutoff. Relative dates are an explicit demo mode, never an automatic change to real deadlines.",
+    "blocked": [],
+    "elapsed_minutes": 75,
+    "break_minutes": 10,
+    "session_limit_start": "2026-10-27T10:30:00-04:00",
+    "session_limit_end": "2026-10-27T11:45:00-04:00",
+    "shorter_window": true,
+    "split_confirmed": false,
+    "calendar_span_minutes": 75
+  },
+  "text": "Here\u2019s a possible way to use your 3 hours (2026-10-27).\n  0\u201350 min: Three-hour assignment (Conflict Test)\n    Listed deadline: 2026-10-28.\n    This is a start; about 1 hour 55 minutes would still be needed afterward.\n  60\u201375 min: Three-hour assignment (Conflict Test)\n    Listed deadline: 2026-10-28.\n    This is a start; about 1 hour 55 minutes would still be needed afterward.\nOther assignments are still on your list. We can take them one session at a time.\nYou have 1 hour 45 minutes left unallocated.\nTiming note: confirm source deadlines; date-only records do not specify a cutoff time.\n\nCalendar blocks:\n2026-10-27T10:30:00-04:00 to 2026-10-27T11:20:00-04:00: Three-hour assignment\n2026-10-27T11:30:00-04:00 to 2026-10-27T11:45:00-04:00: Three-hour assignment",
+  "calendar": {
+    "mode": "demo",
+    "synced_at": "2026-10-27T09:30:00-04:00",
+    "timezone": "America/New_York",
+    "simulated_now": "2026-10-27T09:30:00-04:00",
+    "windows": [
+      {
+        "start": "2026-10-27T10:30:00-04:00",
+        "end": "2026-10-27T11:45:00-04:00"
+      },
+      {
+        "start": "2026-10-27T17:15:00-04:00",
+        "end": "2026-10-27T18:45:00-04:00"
+      },
+      {
+        "start": "2026-10-27T20:15:00-04:00",
+        "end": "2026-10-27T22:00:00-04:00"
+      }
+    ],
+    "explanation": "You\u2019re currently busy with Morning class. I leave 15 minutes around events and keep study time between 08:00 and 22:00.",
+    "planning_start": "2026-10-27T09:30:00-04:00"
+  },
+  "kind": "plan",
+  "minutes": 180,
+  "context": {
+    "action": "plan",
+    "minutes": 180,
+    "after_last_event": false,
+    "not_before": null,
+    "day": "2026-10-27",
+    "task_ids": [],
+    "restrict_tasks": false,
+    "summary": "Allocate 3 hours today to the three\u2011hour assignment due tomorrow",
+    "request_kind": "plan",
+    "clarification_reason": "",
+    "max_windows": 1,
+    "awaiting": null,
+    "completed_task_ids": [],
+    "focus_task_id": "42ceeb429747",
+    "_grounded": true,
+    "confirmation": {
+      "text": "Sounds good. Deadline risk: Eight-hour assignment, Three-hour assignment \u2014 the known free time cannot cover the estimated work before the listed deadline.",
+      "expires": 1794941897.647048,
+      "binding": "7279cbd41814e46f0d40209969845d8a5aee0b8bbfb69716d9fb076d3b399920",
+      "model": "gpt-oss",
+      "signature": "dbc4f896260a54ceee3ac7cd6adeb621811b0e7b45a069c7080e4202df245362"
+    }
+  },
+  "answer_facts": {
+    "total_work_minutes": 660,
+    "total_work": "11 hours",
+    "focus_minutes": 65,
+    "remaining_work_minutes": 595,
+    "remaining_work": "9 hours 55 minutes",
+    "inventory": [
+      {
+        "task": "Eight-hour assignment",
+        "course": "Conflict Test",
+        "due": "2026-10-28",
+        "estimated_minutes": 480
+      },
+      {
+        "task": "Three-hour assignment",
+        "course": "Conflict Test",
+        "due": "2026-10-28",
+        "estimated_minutes": 180
+      }
+    ],
+    "required_answer_phrases": [
+      "11 hours",
+      "9 hours 55 minutes",
+      "1 hour 5 minutes",
+      "1 hour 15 minutes",
+      "shorter",
+      "1 hour 45 minutes unused",
+      "at risk"
+    ],
+    "task_progress": [
+      {
+        "task": "Eight-hour assignment",
+        "before_minutes": 480,
+        "proposed_focus_minutes": 0,
+        "after_minutes": 480,
+        "after": "8 hours"
+      },
+      {
+        "task": "Three-hour assignment",
+        "before_minutes": 180,
+        "proposed_focus_minutes": 65,
+        "after_minutes": 115,
+        "after": "1 hour 55 minutes"
+      }
+    ],
+    "next_opening": {
+      "start": "2026-10-27T17:15:00-04:00",
+      "end": "2026-10-27T18:45:00-04:00"
+    },
+    "deadline_risks": [
+      {
+        "through": "2026-10-29T00:00:00-04:00",
+        "task_names": [
+          "Eight-hour assignment",
+          "Three-hour assignment"
+        ],
+        "work_minutes": 660,
+        "optimistic_free_minutes": 630,
+        "shortfall_at_least_minutes": 30,
+        "note": "Upper bound ignores breaks; date-only deadlines use end of listed date, not a verified cutoff."
+      }
+    ],
+    "can_finish_all": false,
+    "session_elapsed_minutes": 75,
+    "session_break_minutes": 10,
+    "requested_elapsed_minutes": 180
+  },
+  "engine": "two_agent_ai",
+  "model": "gpt-oss",
+  "reasoning_effort": "medium",
+  "analyst_reasoning_effort": "low",
+  "evidence": {
+    "analyst_tool_outputs": 1,
+    "intent_correction": false,
+    "handoff": true,
+    "advisor_returned": true,
+    "facts_checked": true,
+    "critic_passed": false,
+    "critic_reviews": 0,
+    "answer_correction": false,
+    "reply_structure": "Natural AI response grounded in checked plan",
+    "validation_diagnostics": []
+  }
+}

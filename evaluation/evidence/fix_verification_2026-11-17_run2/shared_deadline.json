@@ -1,0 +1,64 @@
+{
+  "input": {
+    "message": "I have three hours today. How can I work toward both assignments before their shared deadline?",
+    "data": {
+      "today": "2026-10-27",
+      "assignments": [
+        {
+          "id": "d1c6672a1933",
+          "course": "Conflict Test",
+          "task": "Eight-hour assignment",
+          "due_date": "2026-10-28",
+          "estimated_hours": 8.0,
+          "estimated_minutes": 480,
+          "source_file": "tasks.txt",
+          "overdue": false,
+          "description": "",
+          "status": "not_started",
+          "due_time": null,
+          "timezone": null,
+          "due_at": null,
+          "can_split": true,
+          "dependencies": [],
+          "first_step": "",
+          "demo_offset_days": null,
+          "fixed_due_date": "2026-10-28",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "42ceeb429747",
+          "course": "Conflict Test",
+          "task": "Three-hour assignment",
+          "due_date": "2026-10-28",
+          "estimated_hours": 3.0,
+          "estimated_minutes": 180,
+          "source_file": "tasks.txt",
+          "overdue": false,
+          "description": "",
+          "status": "not_started",
+          "due_time": null,
+          "timezone": null,
+          "due_at": null,
+          "can_split": true,
+          "dependencies": [],
+          "first_step": "",
+          "demo_offset_days": null,
+          "fixed_due_date": "2026-10-28",
+          "date_mode": "fixed"
+        }
+      ],
+      "warnings": [],
+      "total_estimated_minutes": 660,
+      "source_notes": [],
+      "date_mode": "fixed",
+      "assumption": "Completion and remaining effort come from the source records, not a submission system. Exact due times are used when provided; date-only records have an unknown cutoff. Relative dates are an explicit demo mode, never an automatic change to real deadlines."
+    },
+    "calendar_mode": "demo",
+    "preferences": {},
+    "context": {},
+    "history": []
+  },
+  "smoke_check": "FAIL",
+  "error": "The model response did not pass the required data/format checks. Stage: answer validation; error: ValueError",
+  "elapsed_seconds": 27.52
+}

@@ -1,0 +1,191 @@
+COURSE: CEN 4930 — AI Agent Workflows
+TERM: Fall 2026 — December demonstration week
+DATA TYPE: Fictional planning fixture
+DATE NOTE: All fixed due dates are December 1–7, 2026, as requested. These are not verified course deadlines.
+STATUS NOTE: Progress, estimates, and dependencies below are demonstration data, not student submission records.
+DEMO NOTE: With relative-date mode enabled, Demo offset days is measured from the explicit as-of date; fixed dates are preserved in metadata.
+
+ASSIGNMENTS
+
+Task: Agent use-case proposal
+ID: CEN-01
+Description: Describe the target student, their planning problem, and the agent’s job.
+Due: 2026-12-01
+Due time: 23:59
+Timezone: America/New_York
+Estimated hours: 1
+Remaining minutes: 0
+Status: Completed
+Can split: Yes
+Dependencies: None
+First step: Review the completed proposal if context is needed.
+Demo offset days: 0
+
+Task: Build a single-agent prototype
+ID: CEN-02
+Description: Create the initial agent and verify a basic assignment-retrieval tool.
+Due: 2026-12-01
+Due time: 23:59
+Timezone: America/New_York
+Estimated hours: 2
+Remaining minutes: 0
+Status: Completed
+Can split: Yes
+Dependencies: None
+First step: Review the saved working prototype.
+Demo offset days: 0
+
+Task: M2 team project prototype
+ID: CEN-03
+Description: Document the early prototype and its market assumptions.
+Due: 2026-12-02
+Due time: 23:59
+Timezone: America/New_York
+Estimated hours: 3
+Remaining minutes: 0
+Status: Completed
+Can split: Yes
+Dependencies: None
+First step: Review the submitted demonstration materials.
+Demo offset days: 1
+
+Task: Multi-agent workflow assignment
+ID: CEN-04
+Description: Separate assignment analysis and scheduling with an explicit handoff.
+Due: 2026-12-02
+Due time: 23:59
+Timezone: America/New_York
+Estimated hours: 2
+Remaining minutes: 0
+Status: Completed
+Can split: Yes
+Dependencies: None
+First step: Review the existing handoff implementation.
+Demo offset days: 1
+
+Task: Reasoning and RAG assignment
+ID: CEN-05
+Description: Ground agent responses in retrieved assignment records.
+Due: 2026-12-02
+Due time: 23:59
+Timezone: America/New_York
+Estimated hours: 2
+Remaining minutes: 0
+Status: Completed
+Can split: Yes
+Dependencies: None
+First step: Review the retrieval example and source references.
+Demo offset days: 1
+
+Task: M3 multi-agent system and cost analysis
+ID: CEN-06
+Description: Document the architecture, evaluation commitments, and operating-cost assumptions.
+Due: 2026-12-03
+Due time: 23:59
+Timezone: America/New_York
+Estimated hours: 3
+Remaining minutes: 0
+Status: Completed
+Can split: Yes
+Dependencies: None
+First step: Open the existing M3 evaluation plan when preparing the next task.
+Demo offset days: 2
+
+Task: Evaluation test-case preparation
+ID: CEN-07
+Description: Prepare the original ten cases and their acceptance criteria.
+Due: 2026-12-03
+Due time: 23:59
+Timezone: America/New_York
+Estimated hours: 1
+Remaining minutes: 0
+Status: Completed
+Can split: Yes
+Dependencies: None
+First step: Open the prepared case list.
+Demo offset days: 2
+
+Task: Run agent evaluation suite
+ID: CEN-08
+Description: Execute each committed test case, save actual outputs, and analyze failures.
+Due: 2026-12-04
+Due time: 23:59
+Timezone: America/New_York
+Estimated hours: 3
+Remaining minutes: 90
+Status: In progress
+Can split: Yes
+Dependencies: CEN-07
+First step: Run the next unexecuted case and save its actual output before judging it.
+Demo offset days: 3
+
+Task: User testing sessions and notes
+ID: CEN-09
+Description: Facilitate student sessions and record observations and survey answers.
+Due: 2026-12-05
+Due time: 23:59
+Timezone: America/New_York
+Estimated hours: 1
+Remaining minutes: 60
+Status: Not started
+Can split: Yes
+Dependencies: CEN-08
+First step: Check technical readiness, then prepare one anonymous session-summary template.
+Demo offset days: 4
+
+Task: M4 evaluation and user testing report
+ID: CEN-10
+Description: Synthesize the actual evaluation, user evidence, decision, and updated canvas.
+Due: 2026-12-06
+Due time: 23:59
+Timezone: America/New_York
+Estimated hours: 4
+Remaining minutes: 120
+Status: In progress
+Can split: Yes
+Dependencies: CEN-09
+First step: Collect the completed results and session notes before writing conclusions.
+Demo offset days: 5
+
+Task: Final presentation preparation
+ID: CEN-11
+Description: Prepare a concise pitch and a demo that honestly shows limitations.
+Due: 2026-12-07
+Due time: 12:00
+Timezone: America/New_York
+Estimated hours: 2
+Remaining minutes: 90
+Status: In progress
+Can split: Yes
+Dependencies: CEN-10
+First step: Draft the slide explaining the strongest observed user outcome.
+Demo offset days: 6
+
+Task: Final project presentation
+ID: CEN-12
+Description: Complete one uninterrupted team rehearsal with questions and a demo.
+Due: 2026-12-07
+Due time: 16:00
+Timezone: America/New_York
+Estimated hours: 0.5
+Remaining minutes: 30
+Status: Not started
+Can split: No
+Dependencies: CEN-11
+First step: Confirm all three team members can attend the rehearsal.
+Demo offset days: 6
+
+Task: Prepare TaskPilot poster
+ID: CEN-13
+Description: Create a one-page poster explaining the problem, workflow, and evidence.
+Due: 2026-12-07
+Due time: 23:59
+Timezone: America/New_York
+Estimated hours: 0.75
+Remaining minutes: 45
+Status: Not started
+Can split: No
+Dependencies: None
+First step: Sketch the title, problem statement, and workflow diagram.
+Demo offset days: 6
+

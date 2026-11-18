@@ -1,0 +1,21 @@
+{
+  "purpose": "Scheduling restoration, targeted real execution; not a ten-case score",
+  "source_sha256": {
+    "taskpilot/web_app.py": "761e527f5cd39018d487fa3703ec72620cab330cfd8fa707f38df0307a03c31d",
+    "taskpilot/paths.py": "4460198ad5ea2c8081449b73b25a4a7c64e98ac21bca338f134ac64d92093241",
+    "taskpilot/calendar_sync.py": "74a8546f65ed0a3f314efddd074b8400b3d0da3b5997676bd98eb9925b71ba9a",
+    "taskpilot/calendar_planner.py": "7b160df886d721167bcba55b156bff2d9e4320a907cef5dfc2018c37612c90be",
+    "taskpilot/ai_chat.py": "5bc87e0124fa34da3b51927f3ba7d5d867dfd6fb0c06f0c31b51fe81e201505d",
+    "taskpilot/checked_reply.py": "3c96a05887103e0732845da1eb79e567071f1e04be2f88783263cb9517b69eda",
+    "taskpilot/conversation.py": "f9a88d2e50ae855e739bcfda80d33a9bbfb6c0137f56b6bf0fab70c4caac7aa4",
+    "taskpilot/__init__.py": "138ff5c7b49e4910c0f3256afd1cc695df3b005329e7cf79d761b7e2be46cd9b",
+    "taskpilot/flow.py": "d9615fb08e3f8cf04ffffd12e7d0c34c40a44bb544620f1600690e086de04fb5",
+    "taskpilot/workload.py": "311b29f68373c1da110b1b0f92412e40ad46048d1c45dccb434d986aedc3c49e",
+    "taskpilot/voice.py": "9b13ca9f789b9890f929d6a93f7d9165aa3396744c41d11e25a1568846430d40",
+    "taskpilot/agent.py": "3b8c358daf4ef13cf7e52d964f06270d148f26716066cfbf875def4630885eb2",
+    "taskpilot/grounding.py": "2014cc35de42d7c5fe8516678ce8ef2becf6209dd285052b59c29cc4f456296a",
+    "taskpilot/mcp_server.py": "50b4e478b0d535f4561f707182df827ffd223e7f3276bc6f72e52a21d1b4e2af",
+    "data/syllabi/software_engineering.txt": "c8081a426a0277a2a6a6d8235c67f033d88a772f7b96ebdfa711d5596e98396c",
+    "data/syllabi/algorithms.txt": "565627bbf113d51153074f3ab4fafeaf85eac1a4cfe46648bd741bd8cf6e3dd2"
+  }
+}

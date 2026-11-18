@@ -1,0 +1,79 @@
+{
+  "input": {
+    "message": "I have three hours today. How can I work toward both assignments before their shared deadline?",
+    "data": {
+      "today": "2026-10-27",
+      "assignments": [
+        {
+          "id": "d1c6672a1933",
+          "course": "Conflict Test",
+          "task": "Eight-hour assignment",
+          "due_date": "2026-10-28",
+          "estimated_hours": 8.0,
+          "estimated_minutes": 480,
+          "source_file": "tasks.txt",
+          "overdue": false,
+          "description": "",
+          "status": "not_started",
+          "due_time": null,
+          "timezone": null,
+          "due_at": null,
+          "can_split": true,
+          "dependencies": [],
+          "first_step": "",
+          "demo_offset_days": null,
+          "fixed_due_date": "2026-10-28",
+          "date_mode": "fixed"
+        },
+        {
+          "id": "42ceeb429747",
+          "course": "Conflict Test",
+          "task": "Three-hour assignment",
+          "due_date": "2026-10-28",
+          "estimated_hours": 3.0,
+          "estimated_minutes": 180,
+          "source_file": "tasks.txt",
+          "overdue": false,
+          "description": "",
+          "status": "not_started",
+          "due_time": null,
+          "timezone": null,
+          "due_at": null,
+          "can_split": true,
+          "dependencies": [],
+          "first_step": "",
+          "demo_offset_days": null,
+          "fixed_due_date": "2026-10-28",
+          "date_mode": "fixed"
+        }
+      ],
+      "warnings": [],
+      "total_estimated_minutes": 660,
+      "source_notes": [],
+      "date_mode": "fixed",
+      "assumption": "Completion and remaining effort come from the source records, not a submission system. Exact due times are used when provided; date-only records have an unknown cutoff. Relative dates are an explicit demo mode, never an automatic change to real deadlines."
+    },
+    "calendar_mode": "demo",
+    "preferences": {},
+    "context": {},
+    "history": [],
+    "capture_validation": true
+  },
+  "smoke_check": "FAIL",
+  "error": "The model response did not pass the required data/format checks. Stage: answer validation; error: ValueError",
+  "validation_diagnostics": [
+    {
+      "answer": "You have a shorter session available today: start the Three\u2011hour assignment at 10:30\u202fAM and work until 11:45\u202fAM. That gives 75 minutes elapsed, including 10 minutes of breaks, so you get 65 minutes of focused study. After this block you\u2019ll still have 1 hour\u202f55\u202fminutes left on that assignment and the full 8\u202fhours on the Eight\u2011hour assignment, meaning about 9\u202fhours\u202f55\u202fminutes of work remains out of the total 11\u202fhours. Because the calendar only provides 1\u202fhour\u202f45\u202fminutes unused in this window, the plan is at risk of missing the shared deadline. Would you like to add another window later today to keep the momentum?",
+      "issue": "Include these source facts verbatim: 1 hour 5 minutes; 1 hour 15 minutes"
+    },
+    {
+      "answer": "You have a shorter session today. Start the Three\u2011hour assignment at 10:30\u202fAM (America/New_York). This block runs until 11:45\u202fAM, giving 75 minutes elapsed including 10 minutes of breaks and 65 minutes of focused work. After it you\u2019ll have 1 hour 55 minutes left on that assignment and the full 8\u202fhours on the Eight\u2011hour assignment, so 9 hours 55 minutes of work remains out of the total 11 hours. That leaves 1 hour 45 minutes unused in this session, and the plan is at risk because the available time falls short of the total workload. Would you like to add another window later today?",
+      "issue": "Include these source facts verbatim: 1 hour 5 minutes; 1 hour 15 minutes"
+    },
+    {
+      "answer": "You have a shorter session today. Start the Three\u2011hour assignment at 10:30\u202fAM (America/New_York) and work until 11:45\u202fAM. That gives 75 minutes elapsed, including 10 minutes of breaks, so you get 65 minutes of focused study. After this block you\u2019ll have 1 hour\u202f55\u202fminutes left on that assignment and the full 8\u202fhours on the Eight\u2011hour assignment, which means 9 hours\u202f55\u202fminutes of work remains out of a total of 11\u202fhours. This leaves 1 hour\u202f45\u202fminutes unused in the session, and the plan is at risk because the available time falls short of the total workload.",
+      "issue": "Include these source facts verbatim: 1 hour 5 minutes; 1 hour 15 minutes"
+    }
+  ],
+  "elapsed_seconds": 28.1
+}

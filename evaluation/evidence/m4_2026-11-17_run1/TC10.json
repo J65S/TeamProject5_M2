@@ -1,0 +1,22 @@
+{
+  "started_at": "2026-11-17T12:15:30.119461-05:00",
+  "elapsed_seconds": 0.06,
+  "exit_code": 2,
+  "outer_timeout": false,
+  "command": [
+    "/Users/jacob_schmidt/Desktop/TeamProject5_M2-main/.venv/bin/python",
+    "/Users/jacob_schmidt/Desktop/TeamProject5_M2-main/agent.py",
+    "--syllabi",
+    "/Users/jacob_schmidt/Desktop/TeamProject5_M2-main/evaluation/evidence/m4_2026-11-17_run1/missing_syllabi",
+    "--as-of",
+    "2026-10-27",
+    "--calendar",
+    "demo",
+    "--json",
+    "--request",
+    "I have 3 hours today. What assignments should I work on?"
+  ],
+  "stdout": "",
+  "stderr": "Cannot start TaskPilot: No .txt syllabus files found in /Users/jacob_schmidt/Desktop/TeamProject5_M2-main/evaluation/evidence/m4_2026-11-17_run1/missing_syllabi.\n",
+  "result": null
+}
